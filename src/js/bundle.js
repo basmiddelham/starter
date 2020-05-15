@@ -1,3 +1,4 @@
 import $ from 'jquery';
-import './components/slider';
+import './components/navigation';
 console.log('bundle');
+$('.site-main').css('background', 'gray');

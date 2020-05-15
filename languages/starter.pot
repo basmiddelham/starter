@@ -64,11 +64,11 @@ msgstr ""
 msgid "Primary"
 msgstr ""
 
-#: functions.php:130
+#: functions.php:103
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:132
+#: functions.php:105
 msgid "Add widgets here."
 msgstr ""
 
