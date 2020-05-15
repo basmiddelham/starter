@@ -1,3 +1,6 @@
+/**
+ * Based on https://css-tricks.com/gulp-for-wordpress-initial-setup/
+ */
 import { src, dest, watch, series, parallel } from 'gulp';
 import wpPot from 'gulp-wp-pot';
 import info from './package.json';

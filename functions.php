@@ -71,35 +71,8 @@ if ( ! function_exists( 'strt_setup' ) ) :
 			)
 		);
 
-		// Set up the WordPress core custom background feature.
-		add_theme_support(
-			'custom-background',
-			apply_filters(
-				'strt_custom_background_args',
-				array(
-					'default-color' => 'ffffff',
-					'default-image' => '',
-				)
-			)
-		);
-
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
-
-		/**
-		 * Add support for core custom logo.
-		 *
-		 * @link https://codex.wordpress.org/Theme_Logo
-		 */
-		add_theme_support(
-			'custom-logo',
-			array(
-				'height'      => 250,
-				'width'       => 250,
-				'flex-width'  => true,
-				'flex-height' => true,
-			)
-		);
 	}
 endif;
 add_action( 'after_setup_theme', 'strt_setup' );
@@ -143,23 +116,15 @@ add_action( 'widgets_init', 'strt_widgets_init' );
  * Enqueue scripts and styles.
  */
 function strt_scripts() {
-	// wp_enqueue_style( 'strt-style', get_stylesheet_uri(), array(), STRT_VERSION );
-	wp_enqueue_style( '_themename-stylesheet', get_stylesheet_directory_uri() . '/dist/css/bundle.css', array(), STRT_VERSION );
-	wp_style_add_data( 'strt-style', 'rtl', 'replace' );
+	wp_enqueue_style( 'strt-stylesheet', get_stylesheet_directory_uri() . '/dist/css/bundle.css', array(), STRT_VERSION );
 
-	// wp_enqueue_script( 'strt-navigation', get_template_directory_uri() . '/js/navigation.js', array(), STRT_VERSION, true );
-	wp_enqueue_script( '_themename-scripts', get_template_directory_uri() . '/dist/js/bundle.js', array('jquery'), STRT_VERSION, true );
+	wp_enqueue_script( 'strt-scripts', get_template_directory_uri() . '/dist/js/bundle.js', array('jquery'), STRT_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'strt_scripts' );
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
@@ -175,13 +140,6 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
 
 /**
  * Load WooCommerce compatibility file.
