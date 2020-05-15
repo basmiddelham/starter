@@ -1,16 +1,2 @@
 @import "components/typography";
 
-$colour: rgb(255, 0, 221);
-
-body {
-  background-color: $colour;
-
-  .site-header {
-    display: grid;
-    flex-flow: row wrap;
-    justify-content: center;
-    transition: all .5s;
-    user-select: none;
-    background: linear-gradient(to bottom, white, black);
-  }
-}

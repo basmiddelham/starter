@@ -1,9 +1,7 @@
 import { src, dest, watch, series, parallel } from 'gulp';
-import wpPot from "gulp-wp-pot";
-import replace from "gulp-replace";
-import zip from "gulp-zip";
-import info from "./package.json";
-import browserSync from "browser-sync";
+import wpPot from 'gulp-wp-pot';
+import info from './package.json';
+import browserSync from 'browser-sync';
 import named from 'vinyl-named';
 import webpack from 'webpack-stream';
 import del from 'del';
@@ -70,37 +68,15 @@ export const copy = () => {
 
 export const clean = () => del(['dist']);
 
-export const compress = () => {
-  return src([
-      "**/*",
-      "!node_modules{,/**}",
-      "!bundled{,/**}",
-      "!src{,/**}",
-      "!.babelrc",
-      "!.gitignore",
-      "!gulpfile.babel.js",
-      "!package.json",
-      "!package-lock.json",
-    ])
-    .pipe(
-      gulpif(
-        file => file.relative.split(".").pop() !== "zip",
-        replace("_themename", info.name)
-      )
-    )
-    .pipe(zip(`${info.name}.zip`))
-    .pipe(dest('bundled'));
-  };
-
 export const pot = () => {
-  return src("**/*.php")
-  .pipe(
+  return src('**/*.php')
+    .pipe(
       wpPot({
-        domain: "_themename",
+        domain: 'strt',
         package: info.name
       })
     )
-  .pipe(dest(`languages/${info.name}.pot`));
+    .pipe(dest(`languages/${info.name}.pot`));
 };
 
 export const watchForChanges = () => {
@@ -108,13 +84,13 @@ export const watchForChanges = () => {
   watch('src/images/**/*.{jpg,jpeg,png,svg,gif}', series(images, reload));
   watch(['src/**/*', '!src/{images,js,scss}', '!src/{images,js,scss}/**/*'], series(copy, reload));
   watch('src/js/**/*.js', series(scripts, reload));
-  watch("**/*.php", reload);
+  watch('**/*.php', reload);
 }
 
 const server = browserSync.create();
 export const serve = done => {
   server.init({
-    proxy: "http://starter.local" // put your local website link here
+    proxy: 'http://starter.local' // put your local website link here
   });
   done();
 };

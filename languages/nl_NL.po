@@ -7,168 +7,189 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
+"_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
+"esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.3.1\n"
+"Last-Translator: \n"
+"Language: nl_NL\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "Oops! Die pagina kan niet gevonden worden."
 
 #: 404.php:21
-msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
 msgstr ""
+"Het lijkt erop dat er niets is gevonden op deze locatie. Probeer de links "
+"hieronder of door te zoeken?"
 
 #: 404.php:30
 msgid "Most Used Categories"
-msgstr ""
+msgstr "Meest gebruikte categorieën"
 
 #. translators: %1$s: smiley
 #: 404.php:48
 msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
+msgstr "Probeer in de maandelijkse archieven tezoeken. %1$s"
 
 #. translators: 1: comment count number, 2: title.
 #: comments.php:41
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1$s reactie op &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s reacties op &ldquo;%2$s&rdquo;"
 
 #: comments.php:35
 msgid "One thought on &ldquo;%1$s&rdquo;"
-msgstr ""
+msgstr "Één gedachte over &ldquo;%1$s&rdquo;"
 
 #: comments.php:68
 msgid "Comments are closed."
-msgstr ""
+msgstr "Reacties zijn gesloten."
 
 #: footer.php:16
 msgid "https://wordpress.org/"
-msgstr ""
+msgstr "https://wordpress.org/"
 
 #. translators: %s: CMS name, i.e. WordPress.
 #: footer.php:19
 msgid "Proudly powered by %s"
-msgstr ""
+msgstr "Mogelijk gemaakt door %s"
 
 #. translators: 1: Theme name, 2: Theme author.
 #: footer.php:25
 msgid "Theme: %1$s by %2$s."
-msgstr ""
+msgstr "Thema: %1$s door %2$s."
 
 #: functions.php:53
 msgid "Primary"
-msgstr ""
+msgstr "Primair"
 
 #: functions.php:130
 msgid "Sidebar"
-msgstr ""
+msgstr "Zijbalk"
 
 #: functions.php:132
 msgid "Add widgets here."
-msgstr ""
+msgstr "Voeg hier widgets toe."
 
-#: header.php:26
+#: header.php:26, dist/header.php:26, src/header.php:26
 msgid "Skip to content"
-msgstr ""
+msgstr "Ga naar de inhoud"
 
-#: header.php:49
+#: header.php:49, dist/header.php:49, src/header.php:49
 msgid "Primary Menu"
-msgstr ""
+msgstr "Hoofdmenu"
 
 #. translators: %s: search query.
 #: search.php:21
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Zoekresultaten voor: %s"
 
 #: single.php:23
 msgid "Previous:"
-msgstr ""
+msgstr "Vorige:"
 
 #: single.php:24
 msgid "Next:"
-msgstr ""
+msgstr "Volgende:"
 
 #. translators: %s: post date.
 #: inc/template-tags.php:30
 msgctxt "post date"
 msgid "Posted on %s"
-msgstr ""
+msgstr "Geplaatst op %s"
 
 #. translators: %s: post author.
 #: inc/template-tags.php:46
 msgctxt "post author"
 msgid "by %s"
-msgstr ""
+msgstr "door %s"
 
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:63
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #. translators: 1: list of categories.
 #: inc/template-tags.php:66
 msgid "Posted in %1$s"
-msgstr ""
+msgstr "Geplaatst in %1$s"
 
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:70
 msgctxt "list item separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #. translators: 1: list of tags.
 #: inc/template-tags.php:73
 msgid "Tagged %1$s"
-msgstr ""
+msgstr "Label %1$s"
 
 #. translators: %s: post title
 #: inc/template-tags.php:83
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr ""
+msgstr "Geef een Reactie<span class=\"screen-reader-text\"> op %s</span>"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #. translators: %s: Name of current post. Only visible to screen readers
 #: inc/template-tags.php:100, template-parts/content-page.php:39
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr ""
+msgstr "Bewerk <span class=\"screen-reader-text\">%s</span>"
 
 #: inc/woocommerce.php:184
 msgid "View your shopping cart"
-msgstr ""
+msgstr "Bekijk je winkelwagen"
 
 #. translators: number of items in the mini cart.
 #: inc/woocommerce.php:188
 msgid "%d item"
 msgid_plural "%d items"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d item"
+msgstr[1] "%d items"
 
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
-msgstr ""
+msgstr "Niets gevonden"
 
 #: template-parts/content-none.php:44
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
 msgstr ""
+"Het lijkt er op dat we niet kunnen vinden wat je zoekt. Wellicht kan een "
+"zoekopdracht helpen."
 
 #: template-parts/content-none.php:37
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
 msgstr ""
+"Sorry, maar we hebben geen resultaten gevonden. Probeer een andere zoekterm."
 
 #: template-parts/content-none.php:24
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
+"Klaar om je eerste bericht te publiceren? <a href=\"%1$s\">Begin hier</a>."
 
 #: template-parts/content-page.php:25, template-parts/content.php:53
 msgid "Pages:"
-msgstr ""
+msgstr "Pagina’s:"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: template-parts/content.php:40
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
+msgstr "Verder lezen<span class=\"screen-reader-text\"> \"%s\"</span>"
