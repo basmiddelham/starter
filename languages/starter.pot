@@ -60,23 +60,23 @@ msgstr ""
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: functions.php:63
+#: functions.php:49
 msgid "Primary"
 msgstr ""
 
-#: functions.php:113
+#: functions.php:70
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:115
+#: functions.php:72
 msgid "Add widgets here."
 msgstr ""
 
-#: header.php:26
+#: header.php:63
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:49
+#: header.php:86
 msgid "Primary Menu"
 msgstr ""
 
