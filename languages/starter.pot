@@ -72,12 +72,8 @@ msgstr ""
 msgid "Add widgets here."
 msgstr ""
 
-#: header.php:63
+#: header.php:26
 msgid "Skip to content"
-msgstr ""
-
-#: header.php:86
-msgid "Primary Menu"
 msgstr ""
 
 #. translators: %s: search query.

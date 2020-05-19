@@ -1,0 +1,113 @@
+.text-white p,
+.text-light p {
+    a {
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.text-white p {
+    a {
+        color: $white;
+    }
+}
+
+.text-light p {
+    a {
+        color: $light;
+    }
+}
+
+[class*='bg-'] {
+    .nav-tabs {
+        .nav-link {
+            &:not(.active) {
+                color: $white;
+
+                &:hover {
+                    background-color: rgba($white, 0.75);
+                    color: $body-color;
+                }
+            }
+        }
+    }
+
+    .tab-content {
+        color: $body-color;
+    }
+}
+
+// Alerts
+.alert {
+
+  // Remove margin-top from first element
+  >*:first-child {
+    margin-top: 0;
+  }
+
+  // Remove margin-bottom from last element
+  >*:last-child {
+    margin-bottom: 0;
+  }
+
+  // Make .alert-link color work automaticly
+  a:not(.btn) {
+    @extend .alert-link;
+  }
+
+  &.alert-primary {
+    @extend .alert-primary;
+  }
+
+  &.alert-secondary {
+    @extend .alert-secondary;
+  }
+
+  &.alert-info {
+    @extend .alert-info;
+  }
+
+  &.alert-success {
+    @extend .alert-success;
+  }
+
+  &.alert-warning {
+    @extend .alert-warning;
+  }
+
+  &.alert-danger {
+    @extend .alert-danger;
+  }
+}
+
+// Accordion
+.accordion {
+  a.card-header {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .card-body{
+    >*:first-child {
+      margin-top: 0;
+    }
+
+    >*:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Tabs
+.tab-content .tab-pane {
+  >*:first-child {
+    margin-top: 0;
+  }
+
+  >*:last-child {
+    margin-bottom: 0;
+  }
+}

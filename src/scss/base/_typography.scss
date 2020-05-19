@@ -1,0 +1,72 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// Add top margin to all headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 1.5rem;
+
+    // Remove top margin from 1st heading inside sections with a background.
+    [class*="bg-"] & {
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+// Remove top-margin from all headings folowing another heading.
+h1+h2,
+h2+h3,
+h3+h4,
+h4+h5,
+h5+h6 {
+    margin-top: -0.25rem;
+}
+
+h1+h3,
+h2+h4,
+h3+h5,
+h4+h6 {
+    margin-top: -0.25rem;
+}
+
+.lead {
+    line-height: 1.5;
+}
+
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+    letter-spacing: -0.125rem;
+}
+
+blockquote {
+    @extend .blockquote;
+    @extend .p-4;
+
+    border: 1px solid $border-color;
+    color: $secondary;
+    background-color: rgba($light, 0.5);
+    margin-top: 1rem;
+    margin-bottom: $paragraph-margin-bottom;
+    clear: both;
+
+    p {
+        font-style: italic;
+    }
+
+    >*:first-child {
+        margin-top: 0;
+    }
+
+    >*:last-child {
+        margin-bottom: 0;
+    }
+}

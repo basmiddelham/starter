@@ -18,7 +18,7 @@ import './components/navigation';
 import './components/skip-link-focus-fix.js';
 
 // Jquery test
-$('.site-main').css('background', 'gray');
+// $('.site-main').css('background', 'gray');
 
 // Web Font Loader
 WebFont.load({
