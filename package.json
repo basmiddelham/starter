@@ -41,5 +41,9 @@
     "Safari >= 9",
     "Android >= 4.4",
     "Opera >= 30"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "webfontloader": "^1.6.28"
+  }
 }

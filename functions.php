@@ -7,57 +7,19 @@
  * @package strt
  */
 
+
 if ( ! defined( 'STRT_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( 'STRT_VERSION', '1.0.0' );
 }
 
 if ( ! function_exists( 'strt_setup' ) ) :
-	/**
-	 * Sets up theme defaults and registers support for various WordPress features.
-	 *
-	 * Note that this function is hooked into the after_setup_theme hook, which
-	 * runs before the init hook. The init hook is too late for some features, such
-	 * as indicating support for post thumbnails.
-	 */
 	function strt_setup() {
-		/*
-		 * Make theme available for translation.
-		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on strt, use a find and replace
-		 * to change 'strt' to the name of your theme in all the template files.
-		 */
 		load_theme_textdomain( 'strt', get_template_directory() . '/languages' );
-
-		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
-
-		/*
-		 * Let WordPress manage the document title.
-		 * By adding theme support, we declare that this theme does not use a
-		 * hard-coded <title> tag in the document head, and expect WordPress to
-		 * provide it for us.
-		 */
 		add_theme_support( 'title-tag' );
-
-		/*
-		 * Enable support for Post Thumbnails on posts and pages.
-		 *
-		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-		 */
 		add_theme_support( 'post-thumbnails' );
-
-		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus(
-			array(
-				'menu-1' => esc_html__( 'Primary', 'strt' ),
-			)
-		);
-
-		/*
-		 * Switch default core markup for search form, comment form, and comments
-		 * to output valid HTML5.
-		 */
+		add_theme_support( 'customize-selective-refresh-widgets' );
 		add_theme_support(
 			'html5',
 			array(
@@ -71,31 +33,36 @@ if ( ! function_exists( 'strt_setup' ) ) :
 			)
 		);
 
-		// Add theme support for selective refresh for widgets.
-		add_theme_support( 'customize-selective-refresh-widgets' );
+		// Soil plugin config
+		add_theme_support('soil-clean-up');
+		add_theme_support('soil-disable-rest-api');
+		add_theme_support('soil-disable-asset-versioning');
+		add_theme_support('soil-disable-trackbacks');
+		add_theme_support('soil-js-to-footer');
+		add_theme_support('soil-nav-walker');
+		add_theme_support('soil-nice-search');
+		add_theme_support('soil-relative-urls');
+		// add_theme_support('soil-google-analytics', 'UA-XXXXX-Y');
+
+		register_nav_menus(
+			array(
+				'menu-1' => esc_html__( 'Primary', 'strt' ),
+			)
+		);
 	}
 endif;
 add_action( 'after_setup_theme', 'strt_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
  */
 function strt_content_width() {
-	// This variable is intended to be overruled from themes.
-	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
-	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 	$GLOBALS['content_width'] = apply_filters( 'strt_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'strt_content_width', 0 );
 
 /**
  * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function strt_widgets_init() {
 	register_sidebar(
