@@ -1,34 +1,41 @@
-// Layout
-body:not(.page-template-page-flexbuilder) {
-    @include media-breakpoint-up(lg) {
-        .content-area {
-            @include make-row();
-        }
+// Site Layout.
+body {
+    &:not(.flexbuilder) {
+        > .site {
+            @include make-container();
+            max-width: map-get($container-max-widths, 'xl');
 
-        .site-main {
-            @include make-col-ready();
-            @include make-col(8);
-        }
+            @include media-breakpoint-up(lg) {
+                display: flex;
+                flex-flow: row wrap;
 
-        .widget-area {
-            @include make-col-ready();
-            @include make-col(4);
-        }
-
-        .site-footer {
-            clear: both;
+                .site-main {
+                    width: 75%;
+                }
+        
+                .widget-area {
+                    padding-left: $grid-gutter-width;
+                    width: 25%;
+                }
+        
+                .site-footer {
+                    width: 100%;
+                }
+            }
         }
     }
 
-    .no-sidebar {
-        .content-area {
-            float: none;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    &.error404,
+    &.page,
+    &.blog {
+        > .site {
+            max-width: map-get($container-max-widths, 'lg');
 
-        .site-main {
-            margin-right: 0;
+            @include media-breakpoint-up(lg) {
+                .site-main {
+                    width: 100%;
+                }
+            }
         }
     }
 }

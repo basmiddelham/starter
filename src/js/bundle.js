@@ -1,4 +1,4 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 import WebFont from 'webfontloader';
 
 import 'bootstrap/js/dist/alert'
@@ -16,9 +16,6 @@ import 'bootstrap/js/dist/util'
 
 import './components/navigation';
 import './components/skip-link-focus-fix.js';
-
-// Jquery test
-// $('.site-main').css('background', 'gray');
 
 // Web Font Loader
 WebFont.load({

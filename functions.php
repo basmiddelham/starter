@@ -62,6 +62,11 @@ function strt_content_width() {
 add_action( 'after_setup_theme', 'strt_content_width', 0 );
 
 /**
+ * Remove inline width from caption shortcode
+ */
+add_filter('img_caption_shortcode_width', '__return_false');
+
+/**
  * Register widget area.
  */
 function strt_widgets_init() {
@@ -83,8 +88,8 @@ add_action( 'widgets_init', 'strt_widgets_init' );
  * Enqueue scripts and styles.
  */
 function strt_scripts() {
-    wp_deregister_script('jquery');
-    wp_register_script('jquery', "https://code.jquery.com/jquery-3.5.1.slim.min.js", array(), null);
+	wp_deregister_script('jquery');
+	wp_register_script('jquery', "https://code.jquery.com/jquery-2.2.4.min.js", array(), null);
 
 	wp_enqueue_style( 'strt-stylesheet', get_stylesheet_directory_uri() . '/dist/css/bundle.css', array(), STRT_VERSION );
 

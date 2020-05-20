@@ -118,7 +118,7 @@ if ( ! function_exists( 'strt_woocommerce_wrapper_before' ) ) {
 	 */
 	function strt_woocommerce_wrapper_before() {
 		?>
-			<main id="primary" class="site-main">
+			<main class="site-main">
 		<?php
 	}
 }
