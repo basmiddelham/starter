@@ -10,10 +10,12 @@ body {
                 flex-flow: row wrap;
 
                 .site-main {
+                    margin-top: $grid-gutter-width;
                     width: 75%;
                 }
         
                 .widget-area {
+                    margin-top: $grid-gutter-width;
                     padding-left: $grid-gutter-width;
                     width: 25%;
                 }

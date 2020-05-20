@@ -1,8 +1,8 @@
 /* Widgets
 -------------------------------------------------------------- */
 .widget {
-	.sidebar & {
-	  margin-bottom: $grid-gutter-width;
+	.widget-area & {
+	  margin-bottom: $grid-gutter-width / 1.5;
 	  font-size: $font-size-sm;
 	  line-height: $line-height-sm;
   
@@ -26,9 +26,10 @@
   
 	// Widget title
 	h3 {
-	  font-size: 1em;
+		margin-top: 0;
+		font-size: 1em;
 	}
-  
+
 	ul {
 	  padding-left: 0;
 	  list-style: none;
