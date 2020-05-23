@@ -1,64 +1,154 @@
-@import "../../node_modules/bootstrap/scss/functions";
+// Colors
+$white:                          #fff;
+$gray-100:                       #f8f9fa;
+$gray-200:                       #e9ecef;
+$gray-300:                       #dee2e6;
+$gray-400:                       #ced4da;
+$gray-500:                       #adb5bd;
+$gray-600:                       #6c757d;
+$gray-700:                       #495057;
+$gray-800:                       #343a40;
+$gray-900:                       #212529;
+$black:                          #000;
 
-// Color system
-$primary:       #ed145b;
-$secondary:     #0d2d53;
-$light:         #f3f3f3;
+$primary:                        #07689f;
+$secondary:                      #c9d6df;
+$light:                          #f3f3f3;
+$dark:                           #002b3f;
 
 // Options
-$enable-rounded:               false !default;
-$enable-shadows:               false !default;
-$enable-gradients:             false !default;
-$enable-responsive-font-sizes: true !default;
+$enable-rounded:                 true;
+$enable-shadows:                 true;
+$enable-gradients:               true;
+$enable-responsive-font-sizes:   true;
 
-// Spacing
-$spacer: 1.5rem;
+// Body
+$body-bg:                        $white;
+$body-color:                     $gray-900;
+
+// Links
+$link-color:                     $primary;
+$link-decoration:                none;
+$link-hover-color:               darken($link-color, 15%);
+$link-hover-decoration:          underline;
+
+// Paragraphs
+$paragraph-margin-bottom:        1.25rem;
+
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1280px
+);
 
 // Grid containers
 $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1240px
-) !default;
+  xl: 1200px
+);
 
 // Grid columns
-$grid-gutter-width:              40px !default;
+$grid-gutter-width:              40px;
 
-// Paragraphs
-$paragraph-margin-bottom:        1rem !default;
+// Spacing
+$spacer: 1.5rem;
+
+// Components
+$border-width:                   1px;
+$border-color:                   $gray-300;
+
+$border-radius:                  0.25rem;
+$border-radius-lg:               0.3rem;
+$border-radius-sm:               0.2rem;
 
 // Typography
-$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$font-family-base:            'IBM Plex Sans', $font-family-sans-serif !default;
+$font-family-sans-serif:         -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-base:               "IBM Plex Sans", $font-family-sans-serif;
+$font-size-base:                 1rem;
+$line-height-base:               1.75;
 
-$font-size-base:              1rem !default;
-$line-height-base:            1.875 !default;
+$h1-font-size:                   $font-size-base * 2.5;
+$h2-font-size:                   $font-size-base * 1.75;
+$h3-font-size:                   $font-size-base * 1.25;
+$h4-font-size:                   $font-size-base * 1;
+$h5-font-size:                   $font-size-base * 0.975;
+$h6-font-size:                   $font-size-base * 0.875;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 1.75 !default;
-$h3-font-size:                $font-size-base * 1.25 !default;
-$h4-font-size:                $font-size-base * 1 !default;
-$h5-font-size:                $font-size-base * 0.9375 !default;
-$h6-font-size:                $font-size-base * 0.875 !default;
+$headings-margin-bottom:         1rem;
+$headings-font-family:           null;
+$headings-font-weight:           700;
+$headings-line-height:           1.2;
+$headings-color:                 null;
 
-$headings-margin-bottom:      0.5rem !default;
-$headings-font-family:        null !default;
-$headings-font-weight:        500 !default;
-$headings-line-height:        1.2 !default;
-$headings-color:              null !default;
-
-$display1-size:               4rem;
-$display2-size:               3.5rem;
-$display3-size:               3rem;
+$display1-size:               5rem;
+$display2-size:               4.5rem;
+$display3-size:               3.5rem;
 $display4-size:               2.5rem;
 
-$display1-weight:             200;
-$display2-weight:             200;
-$display3-weight:             200;
-$display4-weight:             200;
-$display-line-height:         1.1;
+$display1-weight:             300;
+$display2-weight:             300;
+$display3-weight:             300;
+$display4-weight:             300;
+$display-line-height:         $headings-line-height;
 
-$lead-font-weight:            300 !default;
+$lead-font-size:              $font-size-base * 1.25;
+$lead-font-weight:            300;
 
 $hr-margin-y:                 $spacer * 2 !default;
+
+// Buttons + Forms
+$input-btn-padding-y:            0.5rem;
+$input-btn-padding-x:            0.875rem;
+$input-btn-padding-y-sm:         0.25rem;
+$input-btn-padding-x-sm:         0.5rem;
+$input-btn-padding-y-lg:         0.85rem;
+$input-btn-padding-x-lg:         1.125rem;
+
+$input-btn-focus-width:          1px;
+$input-btn-focus-color:          rgba($primary, 0.5);
+$input-btn-focus-box-shadow:     0 0 5px $input-btn-focus-width $input-btn-focus-color;
+
+// Buttons
+$btn-padding-x:                  $input-btn-padding-x * 1.75;
+$btn-padding-x-sm:               $input-btn-padding-x-sm * 1.75;
+$btn-padding-x-lg:               $input-btn-padding-x-lg * 1.75;
+
+// Forms
+$input-bg:                       $gray-100;
+$input-border-color:             $gray-200;
+$form-grid-gutter-width:         12px;
+$form-group-margin-bottom:       1.5rem;
+
+// Navs
+$nav-link-padding-y:             0.75rem;
+
+// Navbar
+$navbar-padding-y:               0.5rem;
+$navbar-padding-x:               $grid-gutter-width / 2; // On mobile only
+$navbar-nav-link-padding-x:      1rem;
+
+$navbar-dark-color:              rgba($white, 0.5);
+$navbar-dark-hover-color:        rgba($white, 0.75);
+$navbar-dark-active-color:       $white;
+
+$navbar-light-color:             rgba($black, 0.5);
+$navbar-light-hover-color:       rgba($black, 0.7);
+$navbar-light-active-color:      rgba($black, 0.9);
+
+// Hamburger
+$hamburger-padding-x:            6px;
+$hamburger-padding-y:            6px;
+$hamburger-layer-width:          30px;
+$hamburger-layer-height:         2px;
+$hamburger-layer-spacing:        8px;
+$hamburger-layer-color:          $primary;
+$hamburger-layer-border-radius:  4px;
+$hamburger-hover-opacity:        0.7;
+$hamburger-active-layer-color:   $secondary;
+$hamburger-active-hover-opacity: $hamburger-hover-opacity;
+$hamburger-types:                (collapse); // Only load this animation. Extend this class on .hamburger

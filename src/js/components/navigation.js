@@ -1,99 +1,119 @@
+/* global ScreenReaderText */
 /**
- * File navigation.js.
- *
- * Handles toggling the navigation menu for small screens and enables TAB key
- * navigation support for dropdown menus.
+ * Animate Hamburger-menu
  */
-( function() {
-	const siteNavigation = document.getElementById( 'site-navigation' );
+$('.hamburger').click(function () {
+	$(this).toggleClass('is-active');
+});
 
-	// Return early if the navigation don't exist.
-	if ( ! siteNavigation ) {
-		return;
-	}
+/**
+ * Multilevel animated mobile dropdown-menu
+ */
+function initMainNavigation(container) {
+	// Add submenu-toggle button to display child menu items.
+	var submenuToggle = $('<button />', { 'class': 'submenu-toggle', 'aria-expanded': false })
+		// Add screenreader-text to submenu-toggle
+		.append($('<span />', { 'class': 'screen-reader-text', text: ScreenReaderText.expand }));
+	container.find('.menu-item-has-children > a, .page_item_has_children > a').after(submenuToggle);
 
-	const button = siteNavigation.getElementsByTagName( 'button' )[ 0 ];
+	// Dropdown toggle click function
+	container.find('.submenu-toggle').click(function (e) {
+		var _this = $(this),
+			screenReaderSpan = _this.find('.screen-reader-text'),
+			otherScreenReaderSpan = $('.submenu-toggle.toggled-on .screen-reader-text').not(_this.parents().siblings()),
+			submenu = _this.next('.sub-menu'),
+			otherSubmenus = $('.sub-menu.toggled-on').not(_this.parents()),
+			otherSubmenusToggle = $('.submenu-toggle.toggled-on').not(_this.parents().siblings());
+		e.preventDefault();
 
-	// Return early if the button don't exist.
-	if ( 'undefined' === typeof button ) {
-		return;
-	}
-
-	const menu = siteNavigation.getElementsByTagName( 'ul' )[ 0 ];
-
-	// Hide menu toggle button if menu is empty and return early.
-	if ( 'undefined' === typeof menu ) {
-		button.style.display = 'none';
-		return;
-	}
-
-	if ( ! menu.classList.contains( 'nav-menu' ) ) {
-		menu.classList.add( 'nav-menu' );
-	}
-
-	// Toggle the .toggled class and the aria-expanded value each time the button is clicked.
-	button.addEventListener( 'click', function() {
-		siteNavigation.classList.toggle( 'toggled' );
-
-		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
-			button.setAttribute( 'aria-expanded', 'false' );
+		// If menu is closed
+		if (submenu.height() === 0) {
+			var curHeight = submenu.height(), // Get Default Height
+				autoHeight = submenu.css('height', 'auto').height(); // Get height when submenu is open
+			// Reset to Default Height
+			submenu.height(curHeight);
+			// Animate to Auto Height
+			submenu.stop().animate({ height: autoHeight }, 400, function () {
+				// Reset height to enable sub-sub-menus
+				submenu.css('height', 'auto')
+			});
+			// Close other menu's
+			otherSubmenus.animate({ height: '0' }, 400, function () {
+				otherSubmenus.removeAttr('style');
+			})
+			// Toggle attributes on other menu's
+			otherSubmenusToggle.toggleClass('toggled-on');
+			otherSubmenus.toggleClass('toggled-on');
+			otherSubmenusToggle.attr('aria-expanded', 'false');
+			// Set screenreader text on other menu's
+			otherScreenReaderSpan.text(ScreenReaderText.expand);
+			// if menu is already open
 		} else {
-			button.setAttribute( 'aria-expanded', 'true' );
+			// Close submenu
+			submenu.stop().animate({ height: '0' }, 400, function () {
+				otherSubmenus.removeAttr('style');
+			});
 		}
-	} );
 
-	// Remove the .toggled class and set aria-expanded to false when the user clicks outside the navigation.
-	document.addEventListener( 'click', function( event ) {
-		const isClickInside = siteNavigation.contains( event.target );
+		// Toggle attributes
+		_this.toggleClass('toggled-on');
+		_this.next('.sub-menu').toggleClass('toggled-on');
+		_this.attr('aria-expanded', _this.attr('aria-expanded') === 'false' ? 'true' : 'false');
 
-		if ( ! isClickInside ) {
-			siteNavigation.classList.remove( 'toggled' );
-			button.setAttribute( 'aria-expanded', 'false' );
-		}
-	} );
+		// Set screenreader text
+		screenReaderSpan.text(screenReaderSpan.text() === ScreenReaderText.expand ? ScreenReaderText.collapse : ScreenReaderText.expand);
+	});
+}
+initMainNavigation($('#primary_navigation'));
 
-	// Get all the link elements within the menu.
-	const links = menu.getElementsByTagName( 'a' );
+/**
+ * Fix sub-menus for touch devices and better focus for hidden submenu items for accessibility.
+ */
+var masthead, siteNavigation, menuToggle;
+masthead = $('#masthead');
+siteNavigation = masthead.find('.navbar-nav');
+menuToggle = masthead.find('.hamburger');
 
-	// Get all the link elements with children within the menu.
-	const linksWithChildren = menu.querySelectorAll( '.menu-item-has-children > a, .page_item_has_children > a' );
-
-	// Toggle focus each time a menu link is focused or blurred.
-	for ( const link of links ) {
-		link.addEventListener( 'focus', toggleFocus, true );
-		link.addEventListener( 'blur', toggleFocus, true );
+function focusClasses() {
+	if (!siteNavigation.length || !siteNavigation.children().length) {
+		return;
 	}
 
-	// Toggle focus each time a menu link with children receive a touch event.
-	for ( const link of linksWithChildren ) {
-		link.addEventListener( 'touchstart', toggleFocus, false );
-	}
-
-	/**
-	 * Sets or removes .focus class on an element.
-	 */
-	function toggleFocus() {
-		if ( event.type === 'focus' || event.type === 'blur' ) {
-			let self = this;
-			// Move up through the ancestors of the current link until we hit .nav-menu.
-			while ( ! self.classList.contains( 'nav-menu' ) ) {
-				// On li elements toggle the class .focus.
-				if ( 'li' === self.tagName.toLowerCase() ) {
-					self.classList.toggle( 'focus' );
+	// Toggle `focus` class to allow submenu access on tablets.
+	function toggleFocusClassTouchScreen() {
+		// Check if menu has desktop styling
+		if ('none' === menuToggle.css('display')) {
+			// Remove .focus when thouching outside navigation
+			$(document.body).on('touchstart', function (e) {
+				if (!$(e.target).closest('.navbar-nav li').length) {
+					$('.navbar-nav li').removeClass('focus');
 				}
-				self = self.parentNode;
-			}
-		}
-
-		if ( event.type === 'touchstart' ) {
-			const menuItem = this.parentNode;
-			event.preventDefault();
-			for ( const link of menuItem.parentNode.children ) {
-				if ( menuItem !== link ) {
-					link.classList.remove( 'focus' );
+			});
+			// Toggle .focus on submenus
+			siteNavigation.find('.menu-item-has-children > a, .page_item_has_children > a').on('touchstart', function (e) {
+				var el = $(this).parent('li');
+				if (!el.hasClass('focus')) {
+					e.preventDefault(); // Prevent folowing link on first touch
+					el.toggleClass('focus');
+					el.siblings('.focus').removeClass('focus');
 				}
-			}
-			menuItem.classList.toggle( 'focus' );
+			});
+
+		// If menu has mobile styling
+		} else {
+			siteNavigation.find('.menu-item-has-children > a, .page_item_has_children > a').unbind('touchstart');
 		}
 	}
-}() );
+
+	// Check for touchscreen device & run toggleFocusClassTouchScreen
+	if ('ontouchstart' in window) {
+		$(window).on('resize', toggleFocusClassTouchScreen);
+		toggleFocusClassTouchScreen();
+	}
+
+	// Toggle .focus on focus blur
+	siteNavigation.find('a').on('focus blur', function () {
+		$(this).parents('.menu-item, .page_item').toggleClass('focus');
+	});
+}
+focusClasses();

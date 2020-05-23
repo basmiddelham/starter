@@ -1,5 +1,13 @@
+// Load Bootstrap variables
 @import "base/variables";
+
+// Load Hamburger CSS.
+@import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers";
+
+// Load Bootstrap
 @import "base/bootstrap";
+
+// Load styles
 @import "base/_bootstrap-adjustments";
 @import "base/typography";
 @import "base/buttons";
@@ -11,4 +19,4 @@
 @import "modules/comments";
 @import "layouts/site";
 @import "layouts/archives";
-@import "layouts/header";
+@import "layouts/main-navigation";
