@@ -46,7 +46,7 @@ if ( ! function_exists( 'strt_setup' ) ) :
 		register_nav_menus(
 			array(
 				'primary_navigation' => esc_html__( 'Primary', 'strt' ),
-				'social' => __('Social Menu', 'sage')
+				'social' => __('Social Menu', 'strt')
 			)
 		);
 	}
@@ -84,8 +84,8 @@ add_action( 'widgets_init', 'strt_widgets_init' );
  */
 function strt_scripts() {
     // Create translatable strings for navigation
-    $sage_l10n['expand']   = __('Expand submenu', 'sage');
-	$sage_l10n['collapse'] = __('Collapse submenu', 'sage');
+    $strt_l10n['expand']   = __('Expand submenu', 'strt');
+	$strt_l10n['collapse'] = __('Collapse submenu', 'strt');
 
 	// Load custom jQuery
 	wp_deregister_script('jquery');
@@ -98,7 +98,7 @@ function strt_scripts() {
 	wp_enqueue_script( 'strt-scripts', get_template_directory_uri() . '/dist/js/scripts.js', array( 'jquery' ), STRT_VERSION, true );
 
 	// Pass translatable strings to script
-	wp_localize_script('strt-scripts', 'ScreenReaderText', $sage_l10n);
+	wp_localize_script('strt-scripts', 'ScreenReaderText', $strt_l10n);
 
 	// Load comment-reply]
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

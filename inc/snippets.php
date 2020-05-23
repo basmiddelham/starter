@@ -12,7 +12,6 @@
  */
 set_post_thumbnail_size( 200, 200, true );
 
-
 /**
  * Add dropdown-icon to primary_navigation if menu item has children.
  */
@@ -26,7 +25,6 @@ add_filter('nav_menu_item_title', function ($title, $item, $args, $depth) {
     }
     return $title;
 }, 10, 4);
-
 
 /**
  * Remove inline width from caption shortcode.
@@ -49,7 +47,7 @@ add_action('wp_enqueue_scripts', function () {
  * Add "… Continued" to the excerpt.
  */
 add_filter('excerpt_more', function () {
-    return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
+    return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'strt') . '</a>';
 });
 
 /**

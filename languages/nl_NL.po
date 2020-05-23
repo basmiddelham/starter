@@ -3,6 +3,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: starter\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,12 +17,7 @@ msgstr ""
 "esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Language-Team: \n"
 "X-Generator: Poedit 2.3.1\n"
-"Last-Translator: \n"
-"Language: nl_NL\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
@@ -32,15 +32,6 @@ msgid ""
 msgstr ""
 "Het lijkt erop dat er niets is gevonden op deze locatie. Probeer de links "
 "hieronder of door te zoeken?"
-
-#: 404.php:30
-msgid "Most Used Categories"
-msgstr "Meest gebruikte categorieën"
-
-#. translators: %1$s: smiley
-#: 404.php:48
-msgid "Try looking in the monthly archives. %1$s"
-msgstr "Probeer in de maandelijkse archieven tezoeken. %1$s"
 
 #. translators: 1: comment count number, 2: title.
 #: comments.php:41
@@ -72,25 +63,33 @@ msgstr "Mogelijk gemaakt door %s"
 msgid "Theme: %1$s by %2$s."
 msgstr "Thema: %1$s door %2$s."
 
-#: functions.php:53
+#: functions.php:48
 msgid "Primary"
 msgstr "Primair"
 
-#: functions.php:130
+#: functions.php:49
+msgid "Social Menu"
+msgstr "Social Menu"
+
+#: functions.php:70
 msgid "Sidebar"
 msgstr "Zijbalk"
 
-#: functions.php:132
+#: functions.php:72
 msgid "Add widgets here."
 msgstr "Voeg hier widgets toe."
 
-#: header.php:26, dist/header.php:26, src/header.php:26
+#: functions.php:87
+msgid "Expand submenu"
+msgstr "Submenu uitvouwen"
+
+#: functions.php:88
+msgid "Collapse submenu"
+msgstr "Submenu invouwen"
+
+#: header.php:25
 msgid "Skip to content"
 msgstr "Ga naar de inhoud"
-
-#: header.php:49, dist/header.php:49, src/header.php:49
-msgid "Primary Menu"
-msgstr "Hoofdmenu"
 
 #. translators: %s: search query.
 #: search.php:21
@@ -104,6 +103,10 @@ msgstr "Vorige:"
 #: single.php:24
 msgid "Next:"
 msgstr "Volgende:"
+
+#: inc/snippets.php:50
+msgid "Continued"
+msgstr "Vervolgd"
 
 #. translators: %s: post date.
 #: inc/template-tags.php:30
@@ -185,11 +188,17 @@ msgid ""
 msgstr ""
 "Klaar om je eerste bericht te publiceren? <a href=\"%1$s\">Begin hier</a>."
 
-#: template-parts/content-page.php:25, template-parts/content.php:53
+#: template-parts/content-page.php:25, template-parts/content.php:54
 msgid "Pages:"
 msgstr "Pagina’s:"
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content.php:40
+#: template-parts/content.php:41
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Verder lezen<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#~ msgid "Most Used Categories"
+#~ msgstr "Meest gebruikte categorieën"
+
+#~ msgid "Try looking in the monthly archives. %1$s"
+#~ msgstr "Probeer in de maandelijkse archieven tezoeken. %1$s"
