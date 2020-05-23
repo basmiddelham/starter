@@ -2,8 +2,8 @@
 /**
  * Animate Hamburger-menu
  */
-$('.hamburger').click(function () {
-	$(this).toggleClass('is-active');
+document.getElementById("hamburger-toggler").addEventListener("click", function () {
+	this.classList.toggle("is-active");
 });
 
 /**

@@ -27,7 +27,7 @@
 <header class="navbar navbar-expand-lg navbar-light bg-light" id="masthead">
 	<div class="container">
 		<a class="navbar-brand" href="<?php echo home_url('/') ?>" rel="home"><?php echo get_bloginfo('name', 'display') ?></a>
-		<button class="hamburger hamburger--collapse" type="button" data-toggle="collapse" data-target="#primary_navigation" aria-controls="primary_navigation" aria-expanded="false" aria-label="Toggle navigation">
+		<button id="hamburger-toggler" class="hamburger hamburger--collapse" type="button" data-toggle="collapse" data-target="#primary_navigation" aria-controls="primary_navigation" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="hamburger-box"><span class="hamburger-inner"></span></span>
 		</button>
 		<nav class="collapse navbar-collapse" id="primary_navigation">
