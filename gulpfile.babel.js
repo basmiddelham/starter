@@ -19,7 +19,7 @@ import imagemin from 'gulp-imagemin';
 const PRODUCTION = yargs.argv.prod;
 
 export const styles = () => {
-  return src(['src/scss/bundle.scss', 'src/scss/admin.scss'])
+  return src(['src/scss/styles.scss', 'src/scss/admin.scss'])
     .pipe(gulpif(!PRODUCTION, sourcemaps.init()))
     .pipe(sass().on('error', sass.logError))
     .pipe(gulpif(PRODUCTION, postcss([autoprefixer])))
@@ -36,7 +36,7 @@ export const images = () => {
 }
 
 export const scripts = () => {
-  return src(['src/js/bundle.js', 'src/js/admin.js'])
+  return src(['src/js/scripts.js', 'src/js/admin.js'])
     .pipe(named())
     .pipe(webpack({
       module: {
