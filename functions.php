@@ -35,7 +35,6 @@ if ( ! function_exists( 'strt_setup' ) ) :
 
 		// Soil plugin config
 		add_theme_support('soil-clean-up');
-		add_theme_support('soil-disable-rest-api');
 		add_theme_support('soil-disable-asset-versioning');
 		add_theme_support('soil-disable-trackbacks');
 		add_theme_support('soil-js-to-footer');
@@ -46,7 +45,8 @@ if ( ! function_exists( 'strt_setup' ) ) :
 
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'strt' ),
+				'primary_navigation' => esc_html__( 'Primary', 'strt' ),
+				'social' => __('Social Menu', 'sage')
 			)
 		);
 	}
@@ -60,11 +60,6 @@ function strt_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'strt_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'strt_content_width', 0 );
-
-/**
- * Remove inline width from caption shortcode
- */
-add_filter('img_caption_shortcode_width', '__return_false');
 
 /**
  * Register widget area.
@@ -105,6 +100,11 @@ add_action( 'wp_enqueue_scripts', 'strt_scripts' );
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Snippets for this theme.
+ */
+require get_template_directory() . '/inc/snippets.php';
 
 /**
  * Functions which enhance the theme by hooking into WordPress.
