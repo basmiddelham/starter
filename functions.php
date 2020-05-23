@@ -83,8 +83,8 @@ add_action( 'widgets_init', 'strt_widgets_init' );
  * Enqueue scripts and styles.
  */
 function strt_scripts() {
-    // Create translatable strings for navigation
-    $strt_l10n['expand']   = __('Expand submenu', 'strt');
+	// Create translatable strings for navigation
+	$strt_l10n['expand']   = __('Expand submenu', 'strt');
 	$strt_l10n['collapse'] = __('Collapse submenu', 'strt');
 
 	// Load custom jQuery
