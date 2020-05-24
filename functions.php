@@ -158,6 +158,12 @@ if ( class_exists( 'WooCommerce' ) ) {
 }
 
 /**
+ * Load Flexbuilder file.
+ */
+require_once('vendor/stoutlogic/acf-builder/autoload.php');
+require get_template_directory() . '/fields/flexbuilder.php';
+
+/**
  * Load Gravityforms file.
  */
 require get_template_directory() . '/inc/gravityforms/gravityforms.php';

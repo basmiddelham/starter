@@ -1,9 +1,9 @@
 // Site Layout.
 body {
-    &:not(.flexbuilder) {
-        >.site {
+    &:not(.page-template-page-flexbuilder) {
+        > .site {
             @include make-container();
-            max-width: map-get($container-max-widths, 'xl');
+            max-width: map-get($container-max-widths, "xl");
             margin-top: $grid-gutter-width / 2;
             margin-bottom: $grid-gutter-width / 2;
 
@@ -25,25 +25,25 @@ body {
                 }
             }
         }
-    }
 
-    &.error404,
-    &.page,
-    &.blog {
-        >.site {
-            max-width: map-get($container-max-widths, 'lg');
+        &.error404,
+        &.page,
+        &.blog {
+            > .site {
+                max-width: map-get($container-max-widths, "lg");
 
-            @include media-breakpoint-up(lg) {
-                .site-main {
-                    width: 100%;
+                @include media-breakpoint-up(lg) {
+                    .site-main {
+                        width: 100%;
+                    }
                 }
             }
         }
     }
 
     &.wide-template {
-        >.site {
-            max-width: map-get($container-max-widths, 'xl');
+        > .site {
+            max-width: map-get($container-max-widths, "xl");
         }
     }
 }

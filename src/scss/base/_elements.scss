@@ -1,20 +1,18 @@
-.size-auto, 
-.size-full,
-.size-large,
-.size-medium,
-.size-thumbnail {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
-}
+#content {
+    img {
+        height: auto; /* Make sure images are scaled correctly. */
+        max-width: 100%; /* Adhere to container width. */
+    }
 
-/* Make sure embeds and iframes fit their containers. */
-embed,
-iframe,
-object,
-video {
-	max-width: 100%;
-}
+    /* Make sure embeds and iframes fit their containers. */
+    embed,
+    iframe,
+    object,
+    video {
+        max-width: 100%;
+    }
 
-pre {
-    white-space: pre-wrap;
+    pre {
+        white-space: pre-wrap;
+    }
 }

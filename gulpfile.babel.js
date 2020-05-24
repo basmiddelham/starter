@@ -19,7 +19,7 @@ import imagemin from 'gulp-imagemin';
 const PRODUCTION = yargs.argv.prod;
 
 export const styles = () => {
-  return src(['src/scss/styles.scss', 'src/scss/tinymce.scss'])
+  return src(['src/scss/styles.scss', 'src/scss/tinymce.scss', 'src/scss/flexeditor-style.scss'])
     .pipe(gulpif(!PRODUCTION, sourcemaps.init()))
     .pipe(sass().on('error', sass.logError))
     .pipe(gulpif(PRODUCTION, postcss([autoprefixer])))

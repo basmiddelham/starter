@@ -8,6 +8,30 @@
  */
 
 /**
+ * Simple function to pretty up our field partial includes.
+ *
+ * @param  mixed $partial
+ * @return mixed
+ */
+function get_field_partial($partial) {
+    $partial = str_replace('.', '/', $partial);
+    return include(get_template_directory() . "/fields/{$partial}.php");
+}
+
+/**
+ * Enqueue flexeditor-style in the WordPress admin edit pages.
+ *
+ * @param int $hook Hook suffix for the current admin page.
+ */
+add_action('admin_enqueue_scripts', function ($hook) {
+    if ('post.php' === $hook) {
+        wp_enqueue_style('flexstyle', get_template_directory_uri() . '/dist/css/flexeditor-style.css');
+    } else {
+        return;
+    }
+});
+
+/**
  * Registers an editor stylesheet for the theme.
  */
 add_action('admin_init', function () {
@@ -17,9 +41,9 @@ add_action('admin_init', function () {
 /**
  * Add Google font to Admin
  */
-// add_action('admin_enqueue_scripts', function () {
-//     wp_enqueue_style('my-google-font', '//fonts.googleapis.com/css?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-// });
+add_action('admin_enqueue_scripts', function () {
+    wp_enqueue_style('my-google-font', '//fonts.googleapis.com/css?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+});
 
 /**
  * Add Google font to TinyMCE

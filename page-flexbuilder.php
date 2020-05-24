@@ -16,7 +16,7 @@
 
 get_header();
 ?>
-	<main id="main" class="flex-content">
+	<main class="site-main flex-content" id="content">
 		<?php // get_template_part( 'flexbuilder/flexbuilder' ); ?>
 		<?php include( get_template_directory() . '/flexbuilder/flexbuilder.php' ); ?>
 	</main><!-- #main -->

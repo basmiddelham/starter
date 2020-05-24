@@ -168,16 +168,14 @@ ul {
 @import "../../node_modules/bootstrap/scss/utilities";
 // @import "../../node_modules/bootstrap/scss/print";
 
-
-
 #acf-group_fb {
     @import "base/bootstrap-adjustments";
     @import "base/typography";
     @import "base/elements";
     @import "base/forms";
     @import "flexbuilder/flexbuilder";
-    @import "modules/wp-classes";
-    @import "modules/galleries";
+    @import "components/wp-classes";
+    @import "components/galleries";
 }
 
 @import "base/buttons";

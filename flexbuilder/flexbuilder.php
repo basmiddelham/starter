@@ -1,5 +1,5 @@
 <?php
-// Set counterd for multiple Tabs and Accordions per page
+// Set counter for multiple Tabs and Accordions per page
 $i1 = 0;
 $i2 = 0;
 $i3 = 0;
