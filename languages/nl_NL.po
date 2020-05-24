@@ -57,19 +57,19 @@ msgstr "Primair"
 msgid "Social Menu"
 msgstr "Social Menu"
 
-#: functions.php:70
+#: functions.php:88
 msgid "Sidebar"
 msgstr "Zijbalk"
 
-#: functions.php:72
+#: functions.php:90
 msgid "Add widgets here."
 msgstr "Voeg hier widgets toe."
 
-#: functions.php:87
+#: functions.php:105
 msgid "Expand submenu"
 msgstr "Submenu uitvouwen"
 
-#: functions.php:88
+#: functions.php:106
 msgid "Collapse submenu"
 msgstr "Submenu invouwen"
 
