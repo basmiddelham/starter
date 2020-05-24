@@ -7,10 +7,10 @@ $accordion = new FieldsBuilder('accordion');
 $accordion
     ->addRepeater('accordion', [
         'layout' => 'block',
-        'button_label' => __('Add item', 'sage'),
+        'button_label' => __('Add item', 'strt'),
         'collapsed' => 'title'
     ])
-        ->addText('title', ['placeholder' => __('Title', 'sage')])
+        ->addText('title', ['placeholder' => __('Title', 'strt')])
         ->addWysiwyg('content', ['wrapper' => ['class' => 'autosize']])
     ->endRepeater();
 

@@ -49,7 +49,9 @@ msgstr "Één gedachte over &ldquo;%1$s&rdquo;"
 msgid "Comments are closed."
 msgstr "Reacties zijn gesloten."
 
-#: functions.php:48
+#: functions.php:48, fields/flexbuilder/section_options.php:15,
+#: fields/flexbuilder/components/button_color.php:8,
+#: fields/flexbuilder/partials/section_bg.php:9
 msgid "Primary"
 msgstr "Primair"
 
@@ -77,6 +79,14 @@ msgstr "Submenu invouwen"
 msgid "Skip to content"
 msgstr "Ga naar de inhoud"
 
+#: page-flexbuilder.php:14
+msgid "Flexbuilder"
+msgstr "Flexbuilder"
+
+#: page-wide.php:3
+msgid "Full width page"
+msgstr "Volle breedte pagina"
+
 #. translators: %s: search query.
 #: search.php:21
 msgid "Search Results for: %s"
@@ -90,11 +100,48 @@ msgstr "Vorige:"
 msgid "Next:"
 msgstr "Volgende:"
 
+#: fields/flexbuilder.php:60
+msgid "Item list"
+msgstr "Item lijst"
+
+#: fields/flexbuilder.php:50
+msgid "Posts"
+msgstr "Berichten"
+
+#: fields/flexbuilder.php:40, fields/flexbuilder/item_list.php:31,
+#: fields/flexbuilder/posts.php:17
+msgid "Columns"
+msgstr "Kolommen"
+
+#: fields/flexbuilder.php:30
+msgid "Pageheader"
+msgstr "Pagina header"
+
+#: fields/flexbuilder.php:15
+msgid "Add Section"
+msgstr "Sectie toevoegen"
+
+#: fields/theme_options.php:6
+msgid "Layout previews"
+msgstr "Indelingsvoorbeelden"
+
+#: flexbuilder/posts.php:54
+msgid "Read More"
+msgstr "Lees verder"
+
+#: flexbuilder/posts.php:67
+msgid "By"
+msgstr "Door"
+
+#: flexbuilder/posts.php:75
+msgid "Posted in: "
+msgstr "Geplaatst in: "
+
 #: inc/icons.php:273
 msgid "Social links"
 msgstr "Social links"
 
-#: inc/snippets.php:50
+#: inc/snippets.php:96
 msgid "Continued"
 msgstr "Vervolgd"
 
@@ -141,7 +188,9 @@ msgstr "Geef een Reactie<span class=\"screen-reader-text\"> op %s</span>. "
 msgid "Edit<span class=\"screen-reader-text\"> %s</span>. "
 msgstr "Bewerk<span class=\"screen-reader-text\"> %s</span>. "
 
-#: inc/tinymce.php:27
+#: inc/tinymce.php:27, fields/flexbuilder/components/button_group.php:12,
+#: fields/flexbuilder/components/button_size.php:7,
+#: fields/flexbuilder/components/image.php:9
 msgid "Size"
 msgstr "Grootte"
 
@@ -149,7 +198,8 @@ msgstr "Grootte"
 msgid "Lead"
 msgstr "Inleiding"
 
-#: inc/tinymce.php:35
+#: inc/tinymce.php:35, fields/flexbuilder/components/button_group.php:13,
+#: fields/flexbuilder/components/button_size.php:8
 msgid "Small"
 msgstr "Klein"
 
@@ -181,15 +231,20 @@ msgstr "Kleur 2"
 msgid "Muted"
 msgstr "Gedempt"
 
-#: inc/tinymce.php:85
+#: inc/tinymce.php:85, fields/flexbuilder/section_options.php:27
 msgid "White"
 msgstr "Wit"
 
-#: inc/tinymce.php:90
+#: inc/tinymce.php:90, fields/flexbuilder/section_options.php:28,
+#: fields/flexbuilder/section_options.php:17,
+#: fields/flexbuilder/components/button_color.php:12,
+#: fields/flexbuilder/partials/section_bg.php:11
 msgid "Light"
 msgstr "Licht"
 
-#: inc/tinymce.php:95
+#: inc/tinymce.php:95, fields/flexbuilder/section_options.php:18,
+#: fields/flexbuilder/components/button_color.php:14,
+#: fields/flexbuilder/partials/section_bg.php:12
 msgid "Dark"
 msgstr "Donker"
 
@@ -234,14 +289,447 @@ msgid "Pages:"
 msgstr "Pagina’s:"
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content-page.php:39
-msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr "Bewerk <span class=\"screen-reader-text\">%s</span>"
-
-#. translators: %s: Name of current post. Only visible to screen readers
 #: template-parts/content.php:41
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Verder lezen<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#: fields/flexbuilder/columns.php:103
+msgid "Vertical center"
+msgstr "Verticaal gecentreerd"
+
+#: fields/flexbuilder/columns.php:102, fields/flexbuilder/item_list.php:51
+msgid "Center all text"
+msgstr "Alle tekst centreren"
+
+#: fields/flexbuilder/columns.php:101, fields/flexbuilder/item_list.php:50,
+#: fields/flexbuilder/item_list.php:44,
+#: fields/flexbuilder/components/video.php:22
+msgid "Options"
+msgstr "Opties"
+
+#: fields/flexbuilder/columns.php:90
+msgid "Right wide"
+msgstr "Rechts breed"
+
+#: fields/flexbuilder/columns.php:81
+msgid "Left wide"
+msgstr "Links breed"
+
+#: fields/flexbuilder/columns.php:66
+msgid "4 Columns"
+msgstr "4 Kolommen"
+
+#: fields/flexbuilder/columns.php:54
+msgid "3 Columns"
+msgstr "3 Kolommen"
+
+#: fields/flexbuilder/columns.php:45
+msgid "2 Columns"
+msgstr "2 Kolommen"
+
+#: fields/flexbuilder/columns.php:39
+msgid "1 Column"
+msgstr "1 kolom"
+
+#: fields/flexbuilder/columns.php:33
+msgid "1 Column Narrow"
+msgstr "1 Kolom smal"
+
+#: fields/flexbuilder/columns.php:30
+msgid "Display Horizontal rule"
+msgstr "Horizontale lijn weergeven"
+
+#: fields/flexbuilder/columns.php:29
+msgid "Divider"
+msgstr "Scheidingslijn"
+
+#: fields/flexbuilder/columns.php:25, fields/flexbuilder/pageheader.php:8,
+#: fields/flexbuilder/partials/column_content.php:55
+msgid "Heading"
+msgstr "Kop"
+
+#: fields/flexbuilder/columns.php:13
+msgid "Add row"
+msgstr "Rij toevoegen"
+
+#: fields/flexbuilder/item_list.php:65
+msgid "Round"
+msgstr "Rond"
+
+#: fields/flexbuilder/item_list.php:64
+msgid "Square"
+msgstr "Vierkant"
+
+#: fields/flexbuilder/item_list.php:63
+msgid "Crop"
+msgstr "Bijsnijden"
+
+#: fields/flexbuilder/item_list.php:62,
+#: fields/flexbuilder/partials/container_width.php:9
+msgid "Normal"
+msgstr "Normaal"
+
+#: fields/flexbuilder/item_list.php:59
+msgid "Image shape"
+msgstr "Afbeelding vorm"
+
+#: fields/flexbuilder/item_list.php:54
+msgid "Buttons"
+msgstr "Knoppen"
+
+#: fields/flexbuilder/item_list.php:47
+msgid "Large images"
+msgstr "Grote afbeeldingen"
+
+#: fields/flexbuilder/item_list.php:46
+msgid "Alternate rows"
+msgstr "Afwisselende rijen"
+
+#: fields/flexbuilder/item_list.php:36
+msgid "Column amount"
+msgstr "Aantal kolommen"
+
+#: fields/flexbuilder/item_list.php:33
+msgid "Wide rows"
+msgstr "Brede rijen"
+
+#: fields/flexbuilder/item_list.php:32
+msgid "Rows"
+msgstr "Rijen"
+
+#: fields/flexbuilder/item_list.php:30,
+#: fields/flexbuilder/components/video.php:8
+msgid "Layout"
+msgstr "Layout"
+
+#: fields/flexbuilder/item_list.php:11, fields/flexbuilder/item_list.php:10
+msgid "Intro (optional)"
+msgstr "Intro (optioneel)"
+
+#: fields/flexbuilder/pageheader.php:11
+msgid "Image (optional)"
+msgstr "Afbeelding (optioneel)"
+
+#: fields/flexbuilder/pageheader.php:9
+msgid "Text (optional)"
+msgstr "Tekst (optioneel)"
+
+#: fields/flexbuilder/posts.php:74
+msgid "Show 'More posts' button"
+msgstr "Knop 'Meer berichten' weergeven"
+
+#: fields/flexbuilder/posts.php:73
+msgid "Show categories"
+msgstr "Toon categorieën"
+
+#: fields/flexbuilder/posts.php:72
+msgid "Show author"
+msgstr "Toon auteur"
+
+#: fields/flexbuilder/posts.php:71
+msgid "Show date"
+msgstr "Toon datum"
+
+#: fields/flexbuilder/posts.php:63
+msgid "Posts options"
+msgstr "Posts opties"
+
+#: fields/flexbuilder/posts.php:54
+msgid "Category"
+msgstr "Categorie"
+
+#: fields/flexbuilder/posts.php:47
+msgid "Post type"
+msgstr "Bericht type"
+
+#: fields/flexbuilder/posts.php:39
+msgid "Excerpt length"
+msgstr "Lengte samenvatting"
+
+#: fields/flexbuilder/posts.php:25
+msgid "Amount"
+msgstr "Bedrag"
+
+#: fields/flexbuilder/posts.php:10
+msgid "Intro"
+msgstr "Intro"
+
+#: fields/flexbuilder/section_options.php:26,
+#: fields/flexbuilder/section_options.php:9,
+#: fields/flexbuilder/components/button_group.php:14,
+#: fields/flexbuilder/components/button_size.php:9
+msgid "Standard"
+msgstr "Standaard"
+
+#: fields/flexbuilder/section_options.php:25
+msgid "Text color"
+msgstr "Tekstkleur"
+
+#: fields/flexbuilder/section_options.php:23,
+#: fields/flexbuilder/partials/section_bg.php:17
+msgid "Background repeat"
+msgstr "Achtergrond herhalen"
+
+#: fields/flexbuilder/section_options.php:21,
+#: fields/flexbuilder/section_options.php:19,
+#: fields/flexbuilder/partials/section_bg.php:15,
+#: fields/flexbuilder/partials/section_bg.php:13
+msgid "Background image"
+msgstr "Achtergrondafbeelding"
+
+#: fields/flexbuilder/section_options.php:16,
+#: fields/flexbuilder/components/button_color.php:10,
+#: fields/flexbuilder/partials/section_bg.php:10
+msgid "Secondary"
+msgstr "Secundair"
+
+#: fields/flexbuilder/section_options.php:14,
+#: fields/flexbuilder/partials/section_bg.php:8
+msgid "None"
+msgstr "Geen"
+
+#: fields/flexbuilder/section_options.php:13,
+#: fields/flexbuilder/partials/section_bg.php:7
+msgid "Background"
+msgstr "Achtergrond"
+
+#: fields/flexbuilder/section_options.php:11,
+#: fields/flexbuilder/partials/container_width.php:11
+msgid "Extra narrow"
+msgstr "Extra smal"
+
+#: fields/flexbuilder/section_options.php:10,
+#: fields/flexbuilder/partials/container_width.php:10
+msgid "Narrow"
+msgstr "Smal"
+
+#: fields/flexbuilder/section_options.php:8,
+#: fields/flexbuilder/partials/container_width.php:8
+msgid "Wide"
+msgstr "Breed"
+
+#: fields/flexbuilder/section_options.php:7
+msgid "Section width"
+msgstr "Sectiebreedte"
+
+#: fields/flexbuilder/components/accordion.php:13,
+#: fields/flexbuilder/components/tabs.php:14
+msgid "Title"
+msgstr "Titel"
+
+#: fields/flexbuilder/components/accordion.php:10
+msgid "Add item"
+msgstr "Voeg item toe"
+
+#: fields/flexbuilder/components/button.php:7,
+#: fields/flexbuilder/components/button_content.php:7
+msgid "Button link"
+msgstr "Knop link"
+
+#: fields/flexbuilder/components/button_align.php:11
+msgid "Block"
+msgstr "Blok"
+
+#: fields/flexbuilder/components/button_align.php:10,
+#: fields/flexbuilder/components/button_group.php:10
+msgid "Right"
+msgstr "Rechts"
+
+#: fields/flexbuilder/components/button_align.php:9,
+#: fields/flexbuilder/components/button_group.php:9
+msgid "Center"
+msgstr "Midden"
+
+#: fields/flexbuilder/components/button_align.php:8,
+#: fields/flexbuilder/components/button_group.php:8
+msgid "Left"
+msgstr "Links"
+
+#: fields/flexbuilder/components/button_align.php:7,
+#: fields/flexbuilder/components/button_group.php:7
+msgid "Alignment"
+msgstr "Uitlijning"
+
+#: fields/flexbuilder/components/button_color.php:15
+msgid "Dark outline"
+msgstr "Donker outline"
+
+#: fields/flexbuilder/components/button_color.php:13
+msgid "Light outline"
+msgstr "Licht outline"
+
+#: fields/flexbuilder/components/button_color.php:11
+msgid "Secondary outline"
+msgstr "Secundair outline"
+
+#: fields/flexbuilder/components/button_color.php:9
+msgid "Primary outline"
+msgstr "Primair outline"
+
+#: fields/flexbuilder/components/button_color.php:7
+msgid "Color"
+msgstr "Kleur"
+
+#: fields/flexbuilder/components/button_group.php:17
+msgid "Add button"
+msgstr "Knop toevoegen"
+
+#: fields/flexbuilder/components/button_group.php:15,
+#: fields/flexbuilder/components/button_size.php:10
+msgid "Large"
+msgstr "Groot"
+
+#: fields/flexbuilder/components/image.php:20,
+#: fields/flexbuilder/components/image.php:20
+msgid "Link to large?"
+msgstr "Link naar grote afbeelding?"
+
+#: fields/flexbuilder/components/image.php:18
+msgid "1/1"
+msgstr "1/1"
+
+#: fields/flexbuilder/components/image.php:17
+msgid "1/2 Square"
+msgstr "1/2 Vierkant"
+
+#: fields/flexbuilder/components/image.php:16
+msgid "1/2"
+msgstr "1/2"
+
+#: fields/flexbuilder/components/image.php:15
+msgid "2/3"
+msgstr "2/3"
+
+#: fields/flexbuilder/components/image.php:14
+msgid "1/3 Square"
+msgstr "1/3 Vierkant"
+
+#: fields/flexbuilder/components/image.php:13
+msgid "1/3"
+msgstr "1/3"
+
+#: fields/flexbuilder/components/image.php:12
+msgid "1/4 Square"
+msgstr "1/4 Vierkant"
+
+#: fields/flexbuilder/components/image.php:11
+msgid "1/4"
+msgstr "1/4"
+
+#: fields/flexbuilder/components/image.php:10
+msgid "Choose a size"
+msgstr "Kies een afmeting"
+
+#: fields/flexbuilder/components/tabs.php:17
+msgid "Text"
+msgstr "Tekst"
+
+#: fields/flexbuilder/components/tabs.php:10
+msgid "Add tab"
+msgstr "Tab toevoegen"
+
+#: fields/flexbuilder/components/video.php:32
+msgid "Autoplay"
+msgstr "Automatisch afspelen"
+
+#: fields/flexbuilder/components/video.php:31
+msgid "Loop"
+msgstr "Continu afspelen"
+
+#: fields/flexbuilder/components/video.php:30
+msgid "Preload"
+msgstr "Preload"
+
+#: fields/flexbuilder/components/video.php:29
+msgid "Controls"
+msgstr "Bediening"
+
+#: fields/flexbuilder/components/video.php:10
+msgid "MP4"
+msgstr "MP4"
+
+#: fields/flexbuilder/components/video.php:9
+msgid "Embed"
+msgstr "Embed"
+
+#: fields/flexbuilder/partials/column_content.php:59
+msgid "Text Editor"
+msgstr "Teksteditor"
+
+#: fields/flexbuilder/partials/column_content.php:51
+msgid "Image"
+msgstr "Afbeelding"
+
+#: fields/flexbuilder/partials/column_content.php:47
+msgid "Button"
+msgstr "Knop"
+
+#: fields/flexbuilder/partials/column_content.php:43
+msgid "Button group"
+msgstr "Knoppen groep"
+
+#: fields/flexbuilder/partials/column_content.php:39
+msgid "Gallery"
+msgstr "Galerij"
+
+#: fields/flexbuilder/partials/column_content.php:35
+msgid "Alertbox"
+msgstr "Alertbox"
+
+#: fields/flexbuilder/partials/column_content.php:31
+msgid "Video"
+msgstr "Video"
+
+#: fields/flexbuilder/partials/column_content.php:27
+msgid "Accordion"
+msgstr "Accordeon"
+
+#: fields/flexbuilder/partials/column_content.php:23
+msgid "Tabs"
+msgstr "Tabbladen"
+
+#: fields/flexbuilder/partials/column_content.php:19
+msgid "Table"
+msgstr "Tabel"
+
+#: fields/flexbuilder/partials/column_content.php:8
+msgid "Add content"
+msgstr "Inhoud toevoegen"
+
+#: fields/flexbuilder/partials/container_width.php:7
+msgid "Container"
+msgstr "Container"
+
+#, fuzzy
+#~ msgid "D4"
+#~ msgstr "D4"
+
+#, fuzzy
+#~ msgid "D3"
+#~ msgstr "D3"
+
+#, fuzzy
+#~ msgid "D2"
+#~ msgstr "D2"
+
+#, fuzzy
+#~ msgid "D1"
+#~ msgstr "D1"
+
+#~ msgid "H4"
+#~ msgstr "H4"
+
+#~ msgid "H3"
+#~ msgstr "H3"
+
+#~ msgid "H2"
+#~ msgstr "H2"
+
+#~ msgid "H1"
+#~ msgstr "H1"
+
+#~ msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+#~ msgstr "Bewerk <span class=\"screen-reader-text\">%s</span>"
 
 #~ msgid "https://wordpress.org/"
 #~ msgstr "https://wordpress.org/"
@@ -251,9 +739,6 @@ msgstr "Verder lezen<span class=\"screen-reader-text\"> \"%s\"</span>"
 
 #~ msgid "Theme: %1$s by %2$s."
 #~ msgstr "Thema: %1$s door %2$s."
-
-#~ msgid "Most Used Categories"
-#~ msgstr "Meest gebruikte categorieën"
 
 #~ msgid "Try looking in the monthly archives. %1$s"
 #~ msgstr "Probeer in de maandelijkse archieven tezoeken. %1$s"

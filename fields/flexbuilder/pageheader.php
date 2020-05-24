@@ -5,10 +5,10 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
 $pageheader = new FieldsBuilder('pageheader');
 $pageheader
 
-    ->addText('heading', ['label' => __('Heading', 'sage')])
-    ->addWysiwyg('text', ['label' => __('Text (Optional)', 'sage'), 'wrapper' => ['width' => 50]])
+    ->addText('heading', ['label' => __('Heading', 'strt')])
+    ->addWysiwyg('text', ['label' => __('Text (optional)', 'strt'), 'wrapper' => ['width' => 50]])
     ->addImage('image', [
-        'label' => __('Image (Optional)', 'sage'), 
+        'label' => __('Image (optional)', 'strt'), 
         'wrapper' => ['width' => 50],
         'return_format' => 'id',
         'preview_size' => 'one_half'

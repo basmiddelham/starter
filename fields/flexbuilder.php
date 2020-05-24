@@ -12,7 +12,7 @@ $flexbuilder = new FieldsBuilder('fb', [
 $flexbuilder
     ->setLocation('page_template', '==', 'page-flexbuilder.php')
     ->addFlexibleContent('section', [
-        'button_label' => __('Add Section', 'sage'),
+        'button_label' => __('Add Section', 'strt'),
         'acfe_flexible_layouts_placeholder' => 1,
         'acfe_flexible_advanced' => 1,
         'acfe_flexible_title_edition' => 1,
@@ -27,7 +27,7 @@ $flexbuilder
 
         // Pageheader
         ->addLayout(get_field_partial('flexbuilder.pageheader'), [
-            'label' => __('Pageheader', 'sage'),
+            'label' => __('Pageheader', 'strt'),
             'acfe_flexible_render_template' => 'flexbuilder/flexbuilder.php',
             'acfe_flexible_settings_size' => 'medium',
             'acfe_flexible_settings' => array(
@@ -37,7 +37,7 @@ $flexbuilder
 
         // Columns
         ->addLayout(get_field_partial('flexbuilder.columns'), [
-            'label' => __('Columns', 'sage'),
+            'label' => __('Columns', 'strt'),
             'acfe_flexible_render_template' => 'flexbuilder/flexbuilder.php',
             'acfe_flexible_settings_size' => 'medium',
             'acfe_flexible_settings' => array(
@@ -47,7 +47,7 @@ $flexbuilder
 
         // Posts
         ->addLayout(get_field_partial('flexbuilder.posts'), ['
-            label' => __('Posts', 'sage'),
+            label' => __('Posts', 'strt'),
             'acfe_flexible_render_template' => 'flexbuilder/flexbuilder.php',
             'acfe_flexible_settings_size' => 'medium',
             'acfe_flexible_settings' => array(
@@ -57,7 +57,7 @@ $flexbuilder
 
         // Item Lists
         ->addLayout(get_field_partial('flexbuilder.item_list'), [
-            'label' => __('Item list', 'sage'),
+            'label' => __('Item list', 'strt'),
             'acfe_flexible_render_template' => 'flexbuilder/flexbuilder.php',
             'acfe_flexible_settings_size' => 'medium',
             'acfe_flexible_settings' => array(

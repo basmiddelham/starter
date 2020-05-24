@@ -3,7 +3,7 @@
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
 $layout_previews = new FieldsBuilder('layout_previews', [
-    'title' => __('Layout previews', 'sage'),
+    'title' => __('Layout previews', 'strt'),
     'label_placement' => 'left',
 ]);
 
