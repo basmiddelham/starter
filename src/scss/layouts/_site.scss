@@ -41,4 +41,10 @@ body {
             }
         }
     }
+
+    &.wide-template {
+        > .site {
+            max-width: map-get($container-max-widths, 'xl');
+        }
+    }
 }

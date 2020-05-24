@@ -6,7 +6,7 @@
         font-size: $font-size-sm;
         line-height: $line-height-sm;
 
-        // Make search form smaller
+        // Make search-form smaller
         .search-form {
             input[type="search"] {
                 @extend .form-control-sm;

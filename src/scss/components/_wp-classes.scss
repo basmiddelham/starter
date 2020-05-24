@@ -1,98 +1,72 @@
+/** Hide update date in post meta */
 .updated:not(.published) {
-	display: none;
+    display: none;
 }
 
-// Alignments
+/** Alignments */
 .alignleft,
 .alignright,
 .aligncenter,
 .alignnone {
-	margin-bottom: 1rem;
+    margin-bottom: 1rem;
+
+    @include media-breakpoint-down(xs) {
+        width: 100%;
+    }
 }
 
+@include media-breakpoint-up(sm) {
+    .alignleft {
+        float: left;
+        margin-right: 1.5em;
+    }
 
-.alignleft {
-	float: left;
-	margin-right: 1.5em;
+    .alignright {
+        float: right;
+        margin-left: 1.5em;
+    }
+
+    .aligncenter {
+        clear: both;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
-.alignright {
-	float: right;
-	margin-left: 1.5em;
-}
-
-.aligncenter {
-	clear: both;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-// Captions
+/** Captions */
 .wp-caption {
-	margin-bottom: 1.5em;
-	max-width: 100%;
+    @extend .figure;
+}
 
-	img[class*="wp-image-"] {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.wp-caption-text {
-		margin: 0.8075em 0;
-	}
+.wp-caption img {
+    @extend .figure-img;
+    @extend .img-fluid;
 }
 
 .wp-caption-text {
-	text-align: center;
+    @extend .figure-caption;
+
+    line-height: 1.4;
+    font-size: 0.8125rem;
 }
 
-/* Text meant only for screen readers. */
+/** Text meant only for screen readers */
 .screen-reader-text {
-	border: 0;
-	clip: rect(1px, 1px, 1px, 1px);
-	clip-path: inset(50%);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute !important;
-	width: 1px;
-	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
-
-	&:focus {
-		// background-color: $color__background-screen;
-		border-radius: 3px;
-		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-		clip: auto !important;
-		clip-path: none;
-		// color: $color__text-screen;
-		display: block;
-		font-size: 0.875rem;
-		font-weight: bold;
-		height: auto;
-		left: 5px;
-		line-height: normal;
-		padding: 15px 23px 14px;
-		text-decoration: none;
-		top: 5px;
-		width: auto;
-		z-index: 100000; /* Above WP toolbar. */
-	}
+    @extend .sr-only;
 }
 
 // Smileys
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
-	border: none;
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 0;
+    border: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
 }
 
 .page-links {
-	clear: both;
-	margin: 0 0 1.5em;
+    clear: both;
+    margin: 0 0 1.5em;
 }
