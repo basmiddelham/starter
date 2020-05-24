@@ -65,6 +65,10 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
+#: page-wide.php:3
+msgid "Full Width Page"
+msgstr ""
+
 #. translators: %s: search query.
 #: search.php:21
 msgid "Search Results for: %s"
@@ -82,7 +86,7 @@ msgstr ""
 msgid "Social links"
 msgstr ""
 
-#: inc/snippets.php:50
+#: inc/snippets.php:57
 msgid "Continued"
 msgstr ""
 
