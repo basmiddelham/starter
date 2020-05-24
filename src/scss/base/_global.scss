@@ -1,0 +1,62 @@
+// Remove resize jumps by setting a fixed max-width
+.container {
+    max-width: map_get($container-max-widths, "xl");
+}
+
+// Pagination
+.pagination {
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        .page-numbers {
+            display: block;
+            padding: 0.5rem 0.75rem;
+            margin-left: -$border-width;
+            line-height: 1.25;
+            color: $link-color;
+            background-color: #fff;
+            border: $border-width solid $border-color;
+
+            &:first-child {
+                border-top-left-radius: $border-radius;
+                border-bottom-left-radius: $border-radius;
+            }
+
+            &:last-child {
+                border-top-right-radius: $border-radius;
+                border-bottom-right-radius: $border-radius;
+            }
+
+            &:hover {
+                text-decoration: none;
+                background-color: $gray-300;
+                border-color: $gray-300;
+            }
+
+            &.current {
+                color: #fff;
+                background-color: $link-color;
+                border-color: $link-color;
+            }
+        }
+    }
+}
+
+// Make general focus styles equal to Bootstrap's
+button:focus,
+a:focus {
+    outline-color: $input-btn-focus-color;
+}
+
+// Style user-switching text
+#user_switching_switch_on {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0 5px;
+    background-color: #ffc4c4;
+    font-size: 12px;
+}

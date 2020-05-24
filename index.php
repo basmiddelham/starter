@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-	<main class="site-main">
+	<main class="site-main" id="content">
 
 		<?php
 		if ( have_posts() ) :
@@ -41,7 +41,7 @@ get_header();
 
 			endwhile;
 
-			the_posts_navigation();
+			the_posts_pagination();
 
 		else :
 

@@ -10,6 +10,7 @@
 // Load styles
 @import "base/_bootstrap-adjustments";
 @import "base/typography";
+@import "base/global";
 @import "base/buttons";
 @import "base/forms";
 @import "base/elements";
@@ -20,5 +21,6 @@
 @import "components/comments";
 @import "layouts/site";
 @import "layouts/archives";
+@import "layouts/single";
 @import "layouts/main-navigation";
 @import "layouts/footer";

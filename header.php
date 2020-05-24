@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'strt' ); ?></a>
+<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'strt' ); ?></a>
 
 <header class="navbar navbar-expand-lg navbar-light bg-light" id="masthead">
 	<div class="container">

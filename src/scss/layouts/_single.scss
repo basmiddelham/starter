@@ -1,0 +1,29 @@
+.single {
+    .post-thumbnail {
+        margin-bottom: 1em;
+    }
+
+    .post-navigation {
+        margin-top: 1.5em;
+
+        .nav-links {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            width: 100%;
+
+            .nav-previous,
+            .nav-next {
+                a {
+                    @extend .btn;
+                    @extend .btn-light;
+                    @extend .btn-sm;
+                }
+            }
+
+            .nav-subtitle {
+                @extend .text-muted;
+            }
+        }
+    }
+}
