@@ -2,7 +2,7 @@
 -------------------------------------------------------------- */
 // $grid-gutter-width:   20px;
 
-.gallery {
+.site .gallery {
   @include make-row();
 
   .gallery-item {

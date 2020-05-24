@@ -15,15 +15,15 @@ body.blog {
                 >*:last-child {
                     margin-bottom: 0;
                 }
-
-                h2 {
-                    margin-top: 0;
-                }
             }
 
             img {
                 margin-right: $grid-gutter-width;
             }
+        }
+
+        h2 {
+            margin-top: 0;
         }
 
         p {

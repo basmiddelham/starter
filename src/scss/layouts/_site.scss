@@ -1,26 +1,25 @@
 // Site Layout.
 body {
     &:not(.flexbuilder) {
-        > .site {
+        >.site {
             @include make-container();
             max-width: map-get($container-max-widths, 'xl');
+            margin-top: $grid-gutter-width / 2;
+            margin-bottom: $grid-gutter-width / 2;
 
             @include media-breakpoint-up(lg) {
                 display: flex;
                 flex-flow: row wrap;
 
                 .site-main {
-                    margin-top: $grid-gutter-width;
-                    margin-bottom: $grid-gutter-width;
                     width: 75%;
                 }
-        
+
                 .widget-area {
-                    margin-top: $grid-gutter-width;
                     padding-left: $grid-gutter-width;
                     width: 25%;
                 }
-        
+
                 .site-footer {
                     width: 100%;
                 }
@@ -31,7 +30,7 @@ body {
     &.error404,
     &.page,
     &.blog {
-        > .site {
+        >.site {
             max-width: map-get($container-max-widths, 'lg');
 
             @include media-breakpoint-up(lg) {
@@ -43,7 +42,7 @@ body {
     }
 
     &.wide-template {
-        > .site {
+        >.site {
             max-width: map-get($container-max-widths, 'xl');
         }
     }

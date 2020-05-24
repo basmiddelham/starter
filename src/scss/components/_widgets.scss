@@ -92,12 +92,12 @@
     .gallery {
         margin-right: -1px;
         margin-left: -1px;
-    }
 
-    .gallery-item {
-        padding-right: 1px;
-        padding-left: 1px;
-        margin-bottom: 2px;
+        .gallery-item {
+            padding-right: 1px;
+            padding-left: 1px;
+            margin-bottom: 2px;
+        }
     }
 
     .wp-caption-text {
