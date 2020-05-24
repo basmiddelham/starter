@@ -213,11 +213,6 @@ msgid "Pages:"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content-page.php:39
-msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr ""
-
-#. translators: %s: Name of current post. Only visible to screen readers
 #: template-parts/content.php:41
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
