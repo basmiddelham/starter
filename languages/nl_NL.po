@@ -127,8 +127,8 @@ msgstr ", "
 
 #. translators: 1: list of categories.
 #: inc/template-tags.php:66
-msgid "Posted in %1$s"
-msgstr "Geplaatst in %1$s"
+msgid "Posted in: %1$s. "
+msgstr "Geplaatst in: %1$s. "
 
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:70
@@ -138,19 +138,18 @@ msgstr ", "
 
 #. translators: 1: list of tags.
 #: inc/template-tags.php:73
-msgid "Tagged %1$s"
-msgstr "Label %1$s"
+msgid "Tagged: %1$s. "
+msgstr "Label: %1$s. "
 
 #. translators: %s: post title
 #: inc/template-tags.php:83
-msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr "Geef een Reactie<span class=\"screen-reader-text\"> op %s</span>"
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>. "
+msgstr "Geef een Reactie<span class=\"screen-reader-text\"> op %s</span>. "
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:100, template-parts/content-page.php:39
-msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr "Bewerk <span class=\"screen-reader-text\">%s</span>"
+#: inc/template-tags.php:100
+msgid "Edit<span class=\"screen-reader-text\"> %s</span>. "
+msgstr "Bewerk<span class=\"screen-reader-text\"> %s</span>. "
 
 #: inc/woocommerce.php:184
 msgid "View your shopping cart"
@@ -191,6 +190,11 @@ msgstr ""
 #: template-parts/content-page.php:25, template-parts/content.php:54
 msgid "Pages:"
 msgstr "Pagina’s:"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content-page.php:39
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "Bewerk <span class=\"screen-reader-text\">%s</span>"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: template-parts/content.php:41

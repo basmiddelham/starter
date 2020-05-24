@@ -123,6 +123,11 @@ require get_template_directory() . '/inc/snippets.php';
 require get_template_directory() . '/inc/template-functions.php';
 
 /**
+ * Load custom TinyMCE setting.
+ */
+require get_template_directory() . '/inc/tinymce.php';
+
+/**
  * Load WooCommerce compatibility file.
  */
 if ( class_exists( 'WooCommerce' ) ) {
