@@ -156,3 +156,9 @@ require get_template_directory() . '/inc/tinymce.php';
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+/**
+ * Load Gravityforms file.
+ */
+require get_template_directory() . '/inc/gravityforms/gravityforms.php';
+
