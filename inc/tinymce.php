@@ -24,15 +24,15 @@ add_filter("mce_buttons_2", function ($buttons) {
 add_filter('tiny_mce_before_init', function ($init_array) {
 	$style_formats = array(
 		array(
-			'title' => __('Size', 'sage'),
+			'title' => __('Size', 'strt'),
 			'items' => array(
 				array(
-					'title'    => __('Lead', 'sage'),
+					'title'    => __('Lead', 'strt'),
 					'block' => 'p',
 					'classes'  => 'lead',
 				),
 				array(
-					'title'    => __('Small', 'sage'),
+					'title'    => __('Small', 'strt'),
 					'block' => 'p',
 					'classes'  => 'small'
 				),
@@ -40,22 +40,22 @@ add_filter('tiny_mce_before_init', function ($init_array) {
 					'title' => 'Display',
 					'items' => array(
 						array(
-							'title'   => __('Display 1', 'sage'),
+							'title'   => __('Display 1', 'strt'),
 							'selector'   => 'h1, h2, h3, h4, h5, h6, p',
 							'classes' => 'display-1',
 						),
 						array(
-							'title'   => __('Display 2', 'sage'),
+							'title'   => __('Display 2', 'strt'),
 							'selector'   => 'h1, h2, h3, h4, h5, h6, p',
 							'classes' => 'display-2',
 						),
 						array(
-							'title'   => __('Display 3', 'sage'),
+							'title'   => __('Display 3', 'strt'),
 							'selector'   => 'h1, h2, h3, h4, h5, h6, p',
 							'classes' => 'display-3',
 						),
 						array(
-							'title'   => __('Display 4', 'sage'),
+							'title'   => __('Display 4', 'strt'),
 							'selector'   => 'h1, h2, h3, h4, h5, h6, p',
 							'classes' => 'display-4',
 						)
@@ -67,32 +67,32 @@ add_filter('tiny_mce_before_init', function ($init_array) {
 			'title' => 'Color',
 			'items' => array(
 				array(
-					'title'   => __('Color 1', 'sage'),
+					'title'   => __('Color 1', 'strt'),
 					'inline'  => 'span',
 					'classes' => 'text-primary',
 				),
 				array(
-					'title'   => __('Color 2', 'sage'),
+					'title'   => __('Color 2', 'strt'),
 					'inline'  => 'span',
 					'classes' => 'text-secondary',
 				),
 				array(
-					'title'   => __('Muted', 'sage'),
+					'title'   => __('Muted', 'strt'),
 					'inline'  => 'span',
 					'classes' => 'text-muted',
 				),
 				array(
-					'title'   => __('White', 'sage'),
+					'title'   => __('White', 'strt'),
 					'inline'  => 'span',
 					'classes' => 'text-white',
 				),
 				array(
-					'title'   => __('Light', 'sage'),
+					'title'   => __('Light', 'strt'),
 					'inline'  => 'span',
 					'classes' => 'text-light',
 				),
 				array(
-					'title'   => __('Dark', 'sage'),
+					'title'   => __('Dark', 'strt'),
 					'inline'  => 'span',
 					'classes' => 'text-dark',
 				)

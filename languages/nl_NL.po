@@ -49,20 +49,6 @@ msgstr "Één gedachte over &ldquo;%1$s&rdquo;"
 msgid "Comments are closed."
 msgstr "Reacties zijn gesloten."
 
-#: footer.php:16
-msgid "https://wordpress.org/"
-msgstr "https://wordpress.org/"
-
-#. translators: %s: CMS name, i.e. WordPress.
-#: footer.php:19
-msgid "Proudly powered by %s"
-msgstr "Mogelijk gemaakt door %s"
-
-#. translators: 1: Theme name, 2: Theme author.
-#: footer.php:25
-msgid "Theme: %1$s by %2$s."
-msgstr "Thema: %1$s door %2$s."
-
 #: functions.php:48
 msgid "Primary"
 msgstr "Primair"
@@ -103,6 +89,10 @@ msgstr "Vorige:"
 #: single.php:24
 msgid "Next:"
 msgstr "Volgende:"
+
+#: inc/icons.php:273
+msgid "Social links"
+msgstr "Social links"
 
 #: inc/snippets.php:50
 msgid "Continued"
@@ -150,6 +140,58 @@ msgstr "Geef een Reactie<span class=\"screen-reader-text\"> op %s</span>. "
 #: inc/template-tags.php:100
 msgid "Edit<span class=\"screen-reader-text\"> %s</span>. "
 msgstr "Bewerk<span class=\"screen-reader-text\"> %s</span>. "
+
+#: inc/tinymce.php:27
+msgid "Size"
+msgstr "Grootte"
+
+#: inc/tinymce.php:30
+msgid "Lead"
+msgstr "Inleiding"
+
+#: inc/tinymce.php:35
+msgid "Small"
+msgstr "Klein"
+
+#: inc/tinymce.php:43
+msgid "Display 1"
+msgstr "Display 1"
+
+#: inc/tinymce.php:48
+msgid "Display 2"
+msgstr "Display 2"
+
+#: inc/tinymce.php:53
+msgid "Display 3"
+msgstr "Display 3"
+
+#: inc/tinymce.php:58
+msgid "Display 4"
+msgstr "Display 4"
+
+#: inc/tinymce.php:70
+msgid "Color 1"
+msgstr "Kleur 1"
+
+#: inc/tinymce.php:75
+msgid "Color 2"
+msgstr "Kleur 2"
+
+#: inc/tinymce.php:80
+msgid "Muted"
+msgstr "Gedempt"
+
+#: inc/tinymce.php:85
+msgid "White"
+msgstr "Wit"
+
+#: inc/tinymce.php:90
+msgid "Light"
+msgstr "Licht"
+
+#: inc/tinymce.php:95
+msgid "Dark"
+msgstr "Donker"
 
 #: inc/woocommerce.php:184
 msgid "View your shopping cart"
@@ -200,6 +242,15 @@ msgstr "Bewerk <span class=\"screen-reader-text\">%s</span>"
 #: template-parts/content.php:41
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Verder lezen<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#~ msgid "https://wordpress.org/"
+#~ msgstr "https://wordpress.org/"
+
+#~ msgid "Proudly powered by %s"
+#~ msgstr "Mogelijk gemaakt door %s"
+
+#~ msgid "Theme: %1$s by %2$s."
+#~ msgstr "Thema: %1$s door %2$s."
 
 #~ msgid "Most Used Categories"
 #~ msgstr "Meest gebruikte categorieën"

@@ -37,20 +37,6 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:16
-msgid "https://wordpress.org/"
-msgstr ""
-
-#. translators: %s: CMS name, i.e. WordPress.
-#: footer.php:19
-msgid "Proudly powered by %s"
-msgstr ""
-
-#. translators: 1: Theme name, 2: Theme author.
-#: footer.php:25
-msgid "Theme: %1$s by %2$s."
-msgstr ""
-
 #: functions.php:48
 msgid "Primary"
 msgstr ""
@@ -90,6 +76,10 @@ msgstr ""
 
 #: single.php:24
 msgid "Next:"
+msgstr ""
+
+#: inc/icons.php:273
+msgid "Social links"
 msgstr ""
 
 #: inc/snippets.php:50
@@ -137,6 +127,58 @@ msgstr ""
 #. translators: %s: Name of current post. Only visible to screen readers
 #: inc/template-tags.php:100
 msgid "Edit<span class=\"screen-reader-text\"> %s</span>. "
+msgstr ""
+
+#: inc/tinymce.php:27
+msgid "Size"
+msgstr ""
+
+#: inc/tinymce.php:30
+msgid "Lead"
+msgstr ""
+
+#: inc/tinymce.php:35
+msgid "Small"
+msgstr ""
+
+#: inc/tinymce.php:43
+msgid "Display 1"
+msgstr ""
+
+#: inc/tinymce.php:48
+msgid "Display 2"
+msgstr ""
+
+#: inc/tinymce.php:53
+msgid "Display 3"
+msgstr ""
+
+#: inc/tinymce.php:58
+msgid "Display 4"
+msgstr ""
+
+#: inc/tinymce.php:70
+msgid "Color 1"
+msgstr ""
+
+#: inc/tinymce.php:75
+msgid "Color 2"
+msgstr ""
+
+#: inc/tinymce.php:80
+msgid "Muted"
+msgstr ""
+
+#: inc/tinymce.php:85
+msgid "White"
+msgstr ""
+
+#: inc/tinymce.php:90
+msgid "Light"
+msgstr ""
+
+#: inc/tinymce.php:95
+msgid "Dark"
 msgstr ""
 
 #: inc/woocommerce.php:184

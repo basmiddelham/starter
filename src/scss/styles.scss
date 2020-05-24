@@ -13,10 +13,11 @@
 @import "base/buttons";
 @import "base/forms";
 @import "base/elements";
-@import "modules/wp-classes";
-@import "modules/galleries";
-@import "modules/widgets";
-@import "modules/comments";
+@import "components/social-menu";
+@import "components/wp-classes";
+@import "components/galleries";
+@import "components/widgets";
+@import "components/comments";
 @import "layouts/site";
 @import "layouts/archives";
 @import "layouts/main-navigation";
