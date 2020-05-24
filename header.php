@@ -36,6 +36,11 @@
 			wp_nav_menu(['theme_location' => 'primary_navigation', 'container' => '', 'menu_class' => 'navbar-nav ml-auto']);
 		endif;
 		?>
+		<?php
+		if ( function_exists( 'strt_woocommerce_header_cart' ) ) {
+			strt_woocommerce_header_cart();
+		}
+		?>
 		</nav>
 	</div>
 </header>

@@ -230,11 +230,15 @@ msgid "View your shopping cart"
 msgstr ""
 
 #. translators: number of items in the mini cart.
-#: inc/woocommerce.php:188
+#: inc/woocommerce.php:190
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] ""
 msgstr[1] ""
+
+#: inc/woocommerce.php:239
+msgid "Woocommerce"
+msgstr ""
 
 #: template-parts/content-none.php:14
 msgid "Nothing Found"

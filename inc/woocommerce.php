@@ -43,7 +43,7 @@ add_action( 'after_setup_theme', 'strt_woocommerce_setup' );
  * @return void
  */
 function strt_woocommerce_scripts() {
-	wp_enqueue_style( 'strt-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), STRT_VERSION );
+	// wp_enqueue_style( 'strt-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), STRT_VERSION );
 
 	$font_path   = WC()->plugin_url() . '/assets/fonts/';
 	$inline_font = '@font-face {
@@ -183,13 +183,17 @@ if ( ! function_exists( 'strt_woocommerce_cart_link' ) ) {
 		?>
 		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'strt' ); ?>">
 			<?php
-			$item_count_text = sprintf(
-				/* translators: number of items in the mini cart. */
-				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'strt' ),
-				WC()->cart->get_cart_contents_count()
-			);
+			$count = WC()->cart->get_cart_contents_count();
+			if ($count != 0) {
+				$item_count_text = sprintf(
+					/* translators: number of items in the mini cart. */
+					_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'strt' ),
+					WC()->cart->get_cart_contents_count()
+				);
 			?>
 			<span class="amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span class="count"><?php echo esc_html( $item_count_text ); ?></span>
+			<?php } ?>
+			<?php the_theme_svg('cart'); ?>
 		</a>
 		<?php
 	}
@@ -208,8 +212,8 @@ if ( ! function_exists( 'strt_woocommerce_header_cart' ) ) {
 			$class = '';
 		}
 		?>
-		<ul id="site-header-cart" class="site-header-cart">
-			<li class="<?php echo esc_attr( $class ); ?>">
+		<ul id="site-header-cart" class="site-header-cart navbar-nav">
+			<li class="menu-item <?php echo esc_attr( $class ); ?>">
 				<?php strt_woocommerce_cart_link(); ?>
 			</li>
 			<li>
@@ -225,3 +229,46 @@ if ( ! function_exists( 'strt_woocommerce_header_cart' ) ) {
 		<?php
 	}
 }
+
+
+/**
+ * Register Woocommerce sidebar
+ */
+add_action('widgets_init', function () {
+	register_sidebar([
+		'name'          => __('Woocommerce', 'strt'),
+		'id'            => 'sidebar-woocommerce',
+		'before_widget' => '<section class="widget %1$s %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>'
+	]);
+});
+
+/**
+ * Hide shipping rates when free shipping is available.
+ */
+add_filter('woocommerce_package_rates', function ($rates) {
+	$free = array();
+	foreach ($rates as $rate_id => $rate) {
+		if ('free_shipping' === $rate->method_id) {
+			$free[ $rate_id ] = $rate;
+			break;
+		}
+	}
+	return ! empty($free) ? $free : $rates;
+}, 100);
+
+/**
+ * Change breadcrumb to Bootstrap defaults
+ */
+add_filter('woocommerce_breadcrumb_defaults', function () {
+	return array(
+		'delimiter'   => '',
+		'wrap_before' => '<nav class="woocommerce-breadcrumb" aria-label="breadcrumb"><ol class="breadcrumb">',
+		'wrap_after'  => '</ol></nav>',
+		'before'      => '<li class="breadcrumb-item">',
+		'after'       => '</li>',
+		'home'        => __('Home', 'breadcrumb', 'strt'),
+	);
+});
