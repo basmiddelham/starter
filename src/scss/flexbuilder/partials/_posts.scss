@@ -1,0 +1,18 @@
+.posts {
+  article.post {
+    img {
+      margin-bottom: $spacer;
+      width: 100%;
+      height: auto;
+    }
+
+    p {
+      margin-bottom: 0.75rem;
+    }
+
+    // Remove margin-bottom from last element in last row
+    & > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+/* Classes
+-------------------------------------------------- */
+.bg-img {
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+
+  @include media-breakpoint-down(sm) {
+    min-height: 260px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    min-height: 180px;
+  }
+
+  &.bg-repeat {
+    background-size: auto;
+    background-repeat: repeat;
+  }
+}
+
+.v-center [class*="col-"] {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+.round {
+  border-radius: 100% !important;
+}
+
+.tab-content,
+.accordion,
+.btn-group,
+video,
+.embed-responsive {
+  margin-bottom: 1.5rem;
+}

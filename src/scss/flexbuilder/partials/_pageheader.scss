@@ -1,0 +1,18 @@
+.pageheader {
+  h1.pageheader-title {
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 0;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid $primary;
+  }
+
+  h2.pageheader-heading {
+    @extend .display-3;
+  }
+
+  img {
+    width: 100%;
+  }
+}

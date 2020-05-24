@@ -1,0 +1,547 @@
+@import "base/variables";
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+// Reset ACF admin styles
+ul {
+    list-style: disc;
+    padding: 0 0 0 40px;
+
+    li {
+        margin-bottom: 0;
+    }
+}
+
+.acfe-flexible-placeholder.-preview {
+    font-family: $font-family-base;
+    line-height: $line-height-base;
+    font-size: $font-size-base;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    *,
+    *::before,
+    *::after {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    a {
+        text-decoration: $link-decoration;
+
+        &:hover {
+            text-decoration: $link-hover-decoration;
+        }
+    }
+}
+
+#acf-group_fb {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        padding: 0;
+        margin: 0 0 $headings-margin-bottom;
+        line-height: $headings-line-height;
+        font-weight: $headings-font-weight;
+        color: inherit;
+    }
+
+    h1 {
+        font-size: $h1-font-size;
+    }
+
+    h2 {
+        font-size: $h2-font-size;
+    }
+
+    h3 {
+        font-size: $h3-font-size;
+    }
+
+    h4 {
+        font-size: $h4-font-size;
+    }
+
+    h5 {
+        font-size: $h5-font-size;
+    }
+
+    h6 {
+        font-size: $h6-font-size;
+    }
+
+    p {
+        margin: 0 0 $paragraph-margin-bottom;
+        font-size: $font-size-base;
+        line-height: $line-height-base;
+
+        &.lead {
+            @extend .lead;
+        }
+
+        &.small {
+            @extend .small;
+        }
+    }
+}
+
+#acf-group_fb {
+    // Add padding to column previews
+    .acf-flexible-content .acf-flexible-content {
+        .acfe-flexible-placeholder.-preview {
+            padding: 10px 10px 0;
+        }
+    }
+    
+    .acfe-flexible-placeholder.-preview {
+        .display-1 {
+            font-size: $display1-size;
+            font-weight: $display1-weight;
+        }
+
+        .display-2 {
+            font-size: $display2-size;
+            font-weight: $display2-weight;
+        }
+
+        .display-3 {
+            font-size: $display3-size;
+            font-weight: $display3-weight;
+        }
+
+        .display-4 {
+            font-size: $display4-size;
+            font-weight: $display4-weight;
+        }
+
+        .card {
+            margin-top: inherit;
+            padding: inherit;
+            max-width: inherit;
+            box-shadow: inherit;
+            background: $card-bg;
+        }
+
+        // Add padding to top column-previews (without a background)
+        > section:not([class*='bg-']) {
+            padding-top: 1.5rem;
+        }
+    }
+}
+
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/root";
+// @import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+// @import "../../node_modules/bootstrap/scss/code";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/tables";
+@import "../../node_modules/bootstrap/scss/forms";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/transitions";
+// @import "../../node_modules/bootstrap/scss/dropdown";
+@import "../../node_modules/bootstrap/scss/button-group";
+@import "../../node_modules/bootstrap/scss/input-group";
+// @import "../../node_modules/bootstrap/scss/custom-forms";
+@import "../../node_modules/bootstrap/scss/nav";
+// @import "../../node_modules/bootstrap/scss/navbar";
+@import "../../node_modules/bootstrap/scss/card";
+// @import "../../node_modules/bootstrap/scss/breadcrumb";
+// @import "../../node_modules/bootstrap/scss/pagination";
+// @import "../../node_modules/bootstrap/scss/badge";
+// @import "../../node_modules/bootstrap/scss/jumbotron";
+@import "../../node_modules/bootstrap/scss/alert";
+// @import "../../node_modules/bootstrap/scss/progress";
+// @import "../../node_modules/bootstrap/scss/media";
+// @import "../../node_modules/bootstrap/scss/list-group";
+// @import "../../node_modules/bootstrap/scss/close";
+// @import "../../node_modules/bootstrap/scss/toasts";
+// @import "../../node_modules/bootstrap/scss/modal";
+// @import "../../node_modules/bootstrap/scss/tooltip";
+// @import "../../node_modules/bootstrap/scss/popover";
+// @import "../../node_modules/bootstrap/scss/carousel";
+// @import "../../node_modules/bootstrap/scss/spinners";
+@import "../../node_modules/bootstrap/scss/utilities";
+// @import "../../node_modules/bootstrap/scss/print";
+
+
+
+#acf-group_fb {
+    @import "base/bootstrap-adjustments";
+    @import "base/typography";
+    @import "base/elements";
+    @import "base/forms";
+    @import "flexbuilder/flexbuilder";
+    @import "modules/wp-classes";
+    @import "modules/galleries";
+}
+
+@import "base/buttons";
+
+// Close button
+.acfe-flexible-opened-actions {
+    position: absolute;
+    padding: 0 !important;
+    top: -5px;
+    right: -10px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+    border-color: transparent !important;
+    background-color: transparent !important;
+    z-index: 3;
+
+    a {
+        color: $white !important;
+        border-color: $primary !important;
+        background: $primary !important;
+        padding: 0 4px !important;
+        line-height: 16px !important;
+        min-height: auto !important;
+        font-size: 9px !important;
+        text-transform: uppercase;
+    }
+}
+
+/* --------------------------------------------------------------
+# Flexbuilder Styling
+# Compile using Sass: "sass --watch flexbuilder/assets/flexbuilder.scss:flexbuilder/assets/flexbuilder.css --no-source-map --style=compressed"
+-------------------------------------------------------------- */
+
+$color_0: #565d63;
+$color_1: #878e92;
+$color_2: #d2d2d3;
+$color_3: #e8e8e8;
+$color_4: #f3f3f3;
+$highlight: #5b9ab3;
+$highlight_2: #a44fc5;
+
+a.acf-icon.light.dashicons-admin-generic {
+    background: #2a9bd9;
+    color: #fff;
+
+    &:hover {
+        background: $highlight_2;
+    }
+}
+
+.acf-field[data-name="section"] {
+    input[type="number"] {
+        max-width: 60px;
+    }
+
+    .acf-accordion {
+        margin: 0 !important;
+        background-color: $color_3;
+
+        .acf-accordion-title {
+            padding: 6px 12px !important;
+            background-color: $color_2;
+
+            .acf-accordion-icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+
+    /* Row options
+    --------------------------------------------------------- */
+    >.acf-input>.acf-flexible-content>.values>.layout:not(.-collapsed) {
+        background-color: $color_3;
+
+        .acf-fields.-sidebar {
+            display: flex;
+            flex-flow: row wrap;
+
+            >.acf-field {
+                flex: 1 1 auto;
+            }
+        }
+    }
+
+    /* Borders & padding
+    --------------------------------------------------------- */
+    .layout {
+        border: none;
+        margin-top: 10px;
+
+        .acf-fields {
+            border: none;
+
+            .acf-field {
+                // border: none !important;
+            }
+        }
+    }
+
+    /* Layout handles
+    --------------------------------------------------------- */
+    .layout {
+        .acf-fc-layout-handle {
+            padding: 4px !important;
+            background-color: $color_0;
+            border: none !important;
+            color: white;
+            font-size: 11px !important;
+            text-transform: uppercase;
+        }
+
+        .layout {
+            .acf-fc-layout-handle {
+                background-color: $color_1;
+            }
+
+            .layout {
+                .acf-fc-layout-handle {
+                    background-color: $highlight;
+                }
+            }
+        }
+
+        // icons
+        .acf-fc-layout-controls .acf-icon,
+        .acf-fc-layout-order {
+            height: 14px !important;
+            width: 14px !important;
+            padding: 0 !important;
+            border: none;
+            line-height: 14px !important;
+            font-size: 11px !important;
+        }
+
+        .acf-fc-layout-controls {
+            top: 4px !important;
+            right: 4px !important;
+        }
+    }
+
+    /* Labels
+    --------------------------------------------------------- */
+    .acf-label {
+        label {
+            color: #808080;
+            font-size: 11px;
+            font-weight: normal !important;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+    }
+
+    // Hide top label
+    >.acf-label {
+        display: none;
+    }
+
+    /* Tabs left
+    --------------------------------------------------------- */
+    .acf-fields {
+        &.-sidebar {
+            padding-left: 44px !important;
+
+            &::before {
+                background-color: $color_2;
+                border: none;
+                width: 44px;
+            }
+        }
+
+        .acf-tab-wrap.-left {
+            ul.acf-tab-group {
+                width: 44px;
+
+                li {
+                    .acf-tab-button {
+                        font-size: 0 !important;
+                        line-height: 0 !important;
+                        background-color: $color_2;
+                        border: none;
+
+                        &:hover {
+                            background: $color_4;
+                        }
+
+                        &::before {
+                            color: #888;
+                            font-family: "dashicons", sans-serif;
+                            font-size: 24px;
+                            line-height: 20px;
+                        }
+                    }
+
+                    &.active .acf-tab-button {
+                        background-color: $color_3;
+                    }
+
+                    &:nth-child(1) .acf-tab-button::before {
+                        content: "\f464";
+                    }
+
+                    &:nth-child(2) .acf-tab-button::before {
+                        content: "\f111";
+                    }
+
+                    &:nth-child(3) .acf-tab-button::before {
+                        content: "\f108";
+                    }
+                }
+            }
+        }
+    }
+
+    /* Hide text on TinyMCE buttons
+    --------------------------------------------------------- */
+    .wp-core-ui {
+
+        button.shortcake-add-post-element,
+        // Shortcake button
+        button.insert-media,
+        // Insert Media button
+        a.gform_media_link {
+            // Insert Forms button
+            padding-left: 8px !important;
+            padding-right: 8px !important;
+            font-size: 0;
+            line-height: 0;
+        }
+
+        a.gform_media_link {
+            // Insert Media button
+            padding-left: 11px !important;
+        }
+    }
+
+    /* --------------------------------------------------------- *
+   * Layouts
+   * --------------------------------------------------------- */
+
+    // Buttons
+    [data-name="button"] .acf-fields .acf-label {
+        display: none;
+    }
+
+    /* Columns
+    --------------------------------------------------------- */
+    [data-name="columns"] {
+
+        // Hide labels
+        >.acf-label {
+            display: none;
+        }
+
+        .layout>.acf-fields>.acf-field {
+            >.acf-label {
+                display: none;
+            }
+
+            .acf-fields>.acf-field[data-name="content"] {
+                >.acf-label {
+                    display: none;
+                }
+            }
+        }
+
+        // Layout & background
+        >.acf-input>.acf-flexible-content>.values>.layout {
+            background-color: $color_4;
+
+            &:not(.-collapsed)>.acf-fields {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+
+                >.acf-field {
+                    flex: 1;
+                    padding: 10px !important;
+
+                    >.acf-input>.acf-fields {
+                        background-color: transparent;
+
+                        >.acf-field {
+                            padding: 10px 2px 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Column widths
+        [data-layout="1_column_sm"]>.acf-fields>.acf-field {
+            flex: 0.9 !important;
+        }
+
+        [data-layout="2_columns"]>.acf-fields>.acf-field {
+            width: 50%;
+        }
+
+        [data-layout="3_columns"]>.acf-fields>.acf-field {
+            width: 33.3%;
+        }
+
+        [data-layout="right_wide"]>.acf-fields>.acf-field:first-child {
+            flex: 0.5 !important;
+        }
+
+        [data-layout="left_wide"]>.acf-fields>.acf-field:last-child {
+            flex: 0.5 !important;
+        }
+    }
+
+    /* Column content
+    --------------------------------------------------------- */
+    // Button
+    [data-layout="button"]>.acf-fields {
+        display: flex;
+        flex-flow: row wrap;
+
+        >.acf-field {
+            flex: 1 1 auto;
+
+
+            &[data-name="gallery"] {
+                width: 100%;
+            }
+        }
+    }
+
+    // Table
+    [data-layout="table"] {
+        .acf-table-optionwrap {
+            padding: 0;
+            margin: 0;
+
+            .acf-table-optionbox {
+                margin: 0;
+            }
+        }
+    }
+
+    // Heading
+    [data-layout="heading"]>.acf-fields {
+        display: flex;
+        flex-flow: row wrap;
+
+        >.acf-field {
+            flex: 1 1 auto;
+        }
+    }
+
+    /* Item lists
+    --------------------------------------------------------- */
+    [data-layout="item_list"] {
+
+        [data-name="intro"],
+        [data-name="list"],
+        [data-name="image"],
+        [data-name="content"],
+        [data-name="editor"],
+        [data-name="button_link"] {
+            >.acf-label {
+                display: none;
+            }
+        }
+    }
+}

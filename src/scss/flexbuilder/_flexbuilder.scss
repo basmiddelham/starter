@@ -1,0 +1,75 @@
+@import "partials/classes";
+@import "partials/pageheader";
+@import "partials/item_list";
+@import "partials/posts";
+
+main.flex-content>section {
+  /* Sections WITH background.
+  -------------------------------------------------------------------*/
+  // Add padding to all sections with a background.
+  &[class*="bg-"]:not(.bg-img) {
+    @extend .pt-3;
+    @extend .pt-xl-5;
+    @extend .pb-3;
+    @extend .pb-xl-5;
+
+    // Add top padding to sections without background following a section with background.
+    + :not([class*="bg-"]) {
+      @extend .pt-3;
+      @extend .pt-xl-5;
+    }
+
+    // remove margin-bottom from last element
+    .row:last-child {
+      [class*="col"]>.inner> :last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  /* Sections WITHOUT background.
+  -------------------------------------------------------------------*/
+  &:not([class*="bg-"]) {
+
+    // Add top padding to first section on page.
+    &:first-child {
+      @extend .pt-3;
+      @extend .pt-xl-4;
+    }
+
+    // Add bottom padding to last section on page.
+    &:last-child {
+      @extend .pb-3;
+      @extend .pb-xl-4;
+    }
+
+    // Add margin-top to sections with background following a section without background.
+    + [class*="bg-"] {
+      @extend .mt-3;
+      @extend .mt-xl-5;
+    }
+  }
+
+  /* Sections WITH background image.
+  -------------------------------------------------------------------*/
+  // Add extra large padding to sections with a background image.
+  &.bg-img {
+    padding-top: 8rem !important;
+    padding-bottom: 8rem !important;
+  }
+}
+
+// Container sizes
+.container {
+  // Remove jumps
+  max-width: map-get($container-max-widths, 'xl');
+
+  // Custom sizes
+  &.-sm {
+    max-width: map-get($container-max-widths, 'lg');
+  }
+
+  &.-xs {
+    max-width: map-get($container-max-widths, 'md');
+  }
+}
