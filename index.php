@@ -50,7 +50,7 @@ get_header();
 		endif;
 		?>
 
-	</main><!-- #main -->
+	</main><!-- #content -->
 
 <?php
 get_footer();
