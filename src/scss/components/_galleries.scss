@@ -1,8 +1,8 @@
 /* WP Gallery Bootstrap styling
 -------------------------------------------------------------- */
-// $grid-gutter-width:   20px;
+$grid-gutter-width:   20px;
 
-.site .gallery {
+.gallery {
   @include make-row();
 
   .gallery-item {

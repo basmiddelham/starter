@@ -4,6 +4,7 @@ body {
 }
 
 // Add top margin to all headings except h1
+h1, 
 h2,
 h3,
 h4,
@@ -12,11 +13,11 @@ h6 {
     margin-top: 1.5rem;
 
     // Remove top margin from 1st heading inside sections with a background.
-    [class*="bg-"] & {
+    // [class*="bg-"] & {
         &:first-child {
             margin-top: 0;
         }
-    }
+    // }
 }
 
 // Remove top-margin from all headings folowing another heading.
@@ -51,7 +52,7 @@ blockquote {
     @extend .p-4;
 
     border: 1px solid $border-color;
-    color: $secondary;
+    // color: $secondary;
     background-color: rgba($light, 0.5);
     margin-top: 1rem;
     margin-bottom: $paragraph-margin-bottom;
