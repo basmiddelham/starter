@@ -59,7 +59,7 @@ msgstr "Primair"
 msgid "Social Menu"
 msgstr "Social Menu"
 
-#: functions.php:88
+#: functions.php:88, page-sidebar.php:3
 msgid "Sidebar"
 msgstr "Zijbalk"
 
@@ -75,7 +75,7 @@ msgstr "Submenu uitvouwen"
 msgid "Collapse submenu"
 msgstr "Submenu invouwen"
 
-#: header.php:25
+#: header.php:26
 msgid "Skip to content"
 msgstr "Ga naar de inhoud"
 
@@ -84,11 +84,11 @@ msgid "Flexbuilder"
 msgstr "Flexbuilder"
 
 #: page-wide.php:3
-msgid "Full width page"
-msgstr "Volle breedte pagina"
+msgid "Full width"
+msgstr "Volle breedte"
 
 #. translators: %s: search query.
-#: search.php:21
+#: search.php:22
 msgid "Search Results for: %s"
 msgstr "Zoekresultaten voor: %s"
 
@@ -141,7 +141,7 @@ msgstr "Geplaatst in: "
 msgid "Social links"
 msgstr "Social links"
 
-#: inc/snippets.php:96
+#: inc/snippets.php:107
 msgid "Continued"
 msgstr "Vervolgd"
 
@@ -248,16 +248,24 @@ msgstr "Licht"
 msgid "Dark"
 msgstr "Donker"
 
-#: inc/woocommerce.php:184
+#: inc/woocommerce.php:198
 msgid "View your shopping cart"
 msgstr "Bekijk je winkelwagen"
 
 #. translators: number of items in the mini cart.
-#: inc/woocommerce.php:188
+#: inc/woocommerce.php:204
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] "%d item"
 msgstr[1] "%d items"
+
+#: inc/woocommerce.php:253
+msgid "Woocommerce"
+msgstr ""
+
+#: inc/woocommerce.php:286
+msgid "Home"
+msgstr ""
 
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
