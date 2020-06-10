@@ -10,13 +10,14 @@
  */
 
 ?>
-</div><!-- .site -->
-<footer class="footer">
-	<div class="container">
-		<?php echo social_menu() ?>
-		<?php echo date("Y") ?> &copy; <a href="<?php echo home_url('/'); ?>" rel="home"><?php echo get_bloginfo('name'); ?></a><span class="sep"> | </span><?php echo get_bloginfo( 'description' ) ?>
-	</div>
-</footer>
+
+	</div><!-- .wrap -->
+	<footer class="footer">
+		<div class="container">
+			<?php echo social_menu() ?>
+			<?php echo date("Y") ?> &copy; <a href="<?php echo home_url('/'); ?>" rel="home"><?php echo get_bloginfo('name'); ?></a><span class="sep"> | </span><?php echo get_bloginfo( 'description' ) ?>
+		</div>
+	</footer>
 
 <?php wp_footer(); ?>
 

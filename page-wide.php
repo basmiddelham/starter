@@ -6,7 +6,7 @@
 get_header();
 ?>
 
-	<main class="site-main" id="content">
+	<main class="site-main container" id="content">
 
 		<?php
 		while ( have_posts() ) :

@@ -1,49 +1,47 @@
-// Site Layout.
+// Layout.
+html,
 body {
-    &:not(.page-template-page-flexbuilder) {
-        > .site {
-            @include make-container();
-            max-width: map-get($container-max-widths, "xl");
-            margin-top: $grid-gutter-width * 2;
-            margin-bottom: $grid-gutter-width * 2;
+    height: 100%
+}
 
-            @include media-breakpoint-up(lg) {
-                display: flex;
-                flex-flow: row wrap;
+body {
+    // Sticky footer
+    display: flex;
+    flex-direction: column;
 
-                .site-main {
-                    width: 75%;
-                }
+    > .wrap {
+        flex: 1 0 auto;
+    }
 
-                .widget-area {
-                    padding-left: $grid-gutter-width * 2;
-                    width: 25%;
-                }
+    > footer {
+        flex-shrink: 0;
+    }
 
-                .site-footer {
-                    width: 100%;
-                }
+    // Sidebar
+    .wrap > .container.sb {
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            flex-flow: row wrap;
+
+            .site-main {
+                width: 75%;
             }
-        }
 
-        &.error404,
-        &.page,
-        &.blog {
-            > .site {
-                max-width: map-get($container-max-widths, "lg");
-
-                @include media-breakpoint-up(lg) {
-                    .site-main {
-                        width: 100%;
-                    }
-                }
+            .widget-area {
+                padding-left: $grid-gutter-width * 2;
+                width: 25%;
             }
         }
     }
 
-    &.wide-template {
-        > .site {
-            max-width: map-get($container-max-widths, "xl");
+    // Margins
+    &:not(.page-template-page-flexbuilder) {
+        > header {
+            margin-bottom: $grid-gutter-width * 2;
+        }
+
+        > footer {
+            margin-top: $grid-gutter-width * 2;
         }
     }
 }

@@ -16,12 +16,27 @@
  *
  * @return void
  */
+
+// define the get_product_search_form callback 
+// function filter_get_product_search_form( $form ) { 
+// 	$form ='<form role="search" method="get" class="woocommerce-product-search" action="' . esc_url( home_url( '/' ) ) . '">
+// 	<label class="screen-reader-text" for="woocommerce-product-search-field">' . esc_html_e( 'Search for:', 'woocommerce' ) . '</label>
+// 	<input type="search" id="woocommerce-product-search-field" class="search-field" placeholder="' . esc_attr__( 'Search products&hellip;', 'woocommerce' ) . '" value="' . get_search_query() . '" name="s" />
+// 	<button type="submit" value="' . esc_attr_x( 'Search', 'submit button', 'woocommerce' ) . '">' . esc_html_x( 'Search', 'submit button', 'woocommerce' ) . '</button>
+// 	<input type="hidden" name="post_type" value="product" />
+// 	</form>';
+//     return $form; 
+// };
+// // add the filter
+// add_filter( 'get_product_search_form', 'filter_get_product_search_form', 10, 1 );
+
+
 function strt_woocommerce_setup() {
 	add_theme_support(
 		'woocommerce',
 		array(
-			'thumbnail_image_width' => 150,
-			'single_image_width'    => 300,
+			'thumbnail_image_width' => 280,
+			'single_image_width'    => 415,
 			'product_grid'          => array(
 				'default_rows'    => 3,
 				'min_rows'        => 1,
@@ -117,9 +132,8 @@ if ( ! function_exists( 'strt_woocommerce_wrapper_before' ) ) {
 	 * @return void
 	 */
 	function strt_woocommerce_wrapper_before() {
-		?>
-			<main class="site-main" id="content">
-		<?php
+		echo '<div class="container sb">';
+		echo '<main class="site-main" id="content">';
 	}
 }
 add_action( 'woocommerce_before_main_content', 'strt_woocommerce_wrapper_before' );
@@ -133,9 +147,9 @@ if ( ! function_exists( 'strt_woocommerce_wrapper_after' ) ) {
 	 * @return void
 	 */
 	function strt_woocommerce_wrapper_after() {
-		?>
-			</main><!-- #main -->
-		<?php
+		echo '</main><!-- #content -->';
+		do_action( 'woocommerce_sidebar' );
+		echo '</div><!-- #container sb -->';
 	}
 }
 add_action( 'woocommerce_after_main_content', 'strt_woocommerce_wrapper_after' );
