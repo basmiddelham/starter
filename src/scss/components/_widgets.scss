@@ -2,7 +2,7 @@
 -------------------------------------------------------------- */
 .widget {
     .widget-area & {
-        margin-bottom: $grid-gutter-width / 1.5;
+        margin-bottom: $grid-gutter-width * 2;
         font-size: $font-size-sm;
         line-height: $line-height-sm;
 
@@ -38,7 +38,7 @@
     // Widget title
     h3 {
         margin-top: 0;
-        font-size: 1em;
+        font-size: 1.25em;
     }
 
     ul {

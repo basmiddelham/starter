@@ -24,12 +24,12 @@ body {
             flex-flow: row wrap;
 
             .site-main {
-                width: 75%;
+                width: 70%;
             }
 
             .widget-area {
-                padding-left: $grid-gutter-width * 2;
-                width: 25%;
+                padding-left: $grid-gutter-width * 3;
+                width: 30%;
             }
         }
     }

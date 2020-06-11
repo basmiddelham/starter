@@ -14,7 +14,7 @@ add_filter("mce_buttons", function ($buttons) {
 // Second line toolbar customizations
 add_filter("mce_buttons_2", function ($buttons) {
 	return array(
-		'styleselect', 'aligncenter', 'alignright', 'bullist', 'numlist', 'pastetext', 'blockquote', 'charmap'
+		'styleselect', 'aligncenter', 'alignright', 'bullist', 'numlist', 'hr', 'pastetext', 'blockquote', 'charmap'
 	);
 });
 

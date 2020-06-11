@@ -60,7 +60,7 @@ add_action('admin_enqueue_scripts', function () {
  * Add Google font to TinyMCE
  */
 add_action('init', function () {
-    $font_url = 'http://fonts.googleapis.com/css?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap';
+    $font_url = '//fonts.googleapis.com/css?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap';
     add_editor_style(str_replace(',', '%2C', $font_url));
 });
 

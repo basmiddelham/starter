@@ -2,7 +2,7 @@ body.archive,
 body.search,
 body.blog {
     article {
-        margin-bottom: $grid-gutter-width;
+        margin-bottom: $grid-gutter-width * 2;
 
         @include media-breakpoint-up(md) {
             display: flex;

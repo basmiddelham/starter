@@ -1,6 +1,16 @@
-// Remove resize jumps by setting a fixed max-width
+// Containers
 .container {
-    max-width: map_get($container-max-widths, "xl");
+    // Remove jumps
+    max-width: map-get($container-max-widths, "xl");
+
+    // Custom sizes
+    &.-sm {
+        max-width: 840px;
+    }
+
+    &.-xs {
+        max-width: map-get($container-max-widths, "md");
+    }
 }
 
 // Pagination

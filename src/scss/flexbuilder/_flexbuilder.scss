@@ -59,17 +59,3 @@ main.flex-content>section {
   }
 }
 
-// Container sizes
-.container {
-  // Remove jumps
-  max-width: map-get($container-max-widths, 'xl');
-
-  // Custom sizes
-  &.-sm {
-    max-width: map-get($container-max-widths, 'lg');
-  }
-
-  &.-xs {
-    max-width: map-get($container-max-widths, 'md');
-  }
-}

@@ -51,9 +51,6 @@ if ( ! function_exists( 'strt_setup' ) ) :
 		);
 
 		// Add Image sizes
-		// add_image_size('fullwidth', 1440, 9999);
-		// add_image_size('large_letterbox', 1440, 720, true);
-		add_image_size('one', 956, 9999);
 		add_image_size('one', 956, 9999);
 		add_image_size('one_half', 556, 9999);
 		add_image_size('one_half_crop', 556, 371, true);
@@ -70,6 +67,21 @@ if ( ! function_exists( 'strt_setup' ) ) :
 	}
 endif;
 add_action( 'after_setup_theme', 'strt_setup' );
+
+/**
+ * Make Custom Image Sizes Selectable in Admin
+ */
+add_filter('image_size_names_choose', function ($sizes) {
+    return array_merge($sizes, array(
+        'one_fourth'        => '1/4',
+        'one_fourth_square' => '1/4 Square',
+        'one_third'         => '1/3',
+        'one_third_square'  => '1/3 Square',
+        'one_half'          => '1/2',
+        'one_half_square'   => '1/2 Square',
+        'one'               => '1/1',
+    ));
+});
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -155,6 +167,7 @@ require get_template_directory() . '/inc/tinymce.php';
  */
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
+	require get_template_directory() . '/inc/woocommerce-cleanup.php';
 }
 
 /**
