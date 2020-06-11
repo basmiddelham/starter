@@ -1,19 +1,9 @@
-/** Load only necessary Bootstrap files */
-@import "base/variables";
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
-@import "../../node_modules/bootstrap/scss/mixins";
-@import "../../node_modules/bootstrap/scss/root";
-@import "../../node_modules/bootstrap/scss/reboot";
-@import "../../node_modules/bootstrap/scss/type";
-@import "../../node_modules/bootstrap/scss/images";
-@import "../../node_modules/bootstrap/scss/code";
-@import "../../node_modules/bootstrap/scss/utilities";
-
-/** Load only necessary styles */
+@import "base/bootstrap";
+@import "base/_bootstrap-adjustments";
 @import "base/typography";
 @import "base/elements";
 @import "components/wp-classes";
+@import "gravityforms/gravityforms";
 
 body#tinymce.wp-editor { 
     margin: 10px; 
