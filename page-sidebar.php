@@ -1,11 +1,16 @@
 <?php
 /**
  * Template Name: Sidebar
+ * 
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package strt
  */
 
 get_header();
 ?>
-	<div class="container sb">
+
+	<div class="wrap">
 		<main class="site-main" id="content">
 
 			<?php

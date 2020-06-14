@@ -9,7 +9,8 @@
 
 get_header();
 ?>
-	<div class="container sb">
+
+	<div class="wrap">
 		<main class="site-main" id="content">
 
 			<?php

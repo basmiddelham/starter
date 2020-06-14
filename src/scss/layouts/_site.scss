@@ -9,7 +9,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    > .wrap {
+    > .site {
         flex: 1 0 auto;
     }
 
@@ -17,19 +17,53 @@ body {
         flex-shrink: 0;
     }
 
-    // Sidebar
-    .wrap > .container.sb {
-        @include media-breakpoint-up(lg) {
-            display: flex;
-            flex-flow: row wrap;
+    // Standard pages
+    > .site {
+        @include make-container();
+        max-width: map-get($container-max-widths, 'lg');
+        padding-left: $grid-gutter-width;
+        padding-right: $grid-gutter-width;
+    }
 
-            .site-main {
-                width: 70%;
-            }
+    // Full width layout
+    &.page-template-page-wide > .site {
+        max-width: map-get($container-max-widths, 'xl');
+    }
 
-            .widget-area {
-                padding-left: $grid-gutter-width * 3;
-                width: 30%;
+    // Sidebar layout
+    &.single,
+    &.page-template-page-sidebar {
+
+        > .site {
+            @include make-container();
+            max-width: map-get($container-max-widths, 'xl');
+            padding-left: $grid-gutter-width;
+            padding-right: $grid-gutter-width;
+
+            > .wrap {
+                @include make-row();
+                margin-right: -$grid-gutter-width;
+                margin-left: -$grid-gutter-width;
+
+                .site-main {
+                    @include make-col-ready();
+                    padding-left: $grid-gutter-width;
+                    padding-right: $grid-gutter-width;
+            
+                    @include media-breakpoint-up(lg) {
+                      @include make-col(9);
+                    }
+                }
+
+                .widget-area {
+                    @include make-col-ready();
+                    padding-left: $grid-gutter-width;
+                    padding-right: $grid-gutter-width;
+            
+                    @include media-breakpoint-up(lg) {
+                      @include make-col(3);
+                    }
+                }
             }
         }
     }

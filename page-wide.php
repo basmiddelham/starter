@@ -1,12 +1,16 @@
 <?php
 /**
  * Template Name: Full width
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package strt
  */
 
 get_header();
 ?>
 
-	<main class="site-main container" id="content">
+	<main class="site-main" id="content">
 
 		<?php
 		while ( have_posts() ) :

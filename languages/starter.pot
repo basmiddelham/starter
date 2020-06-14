@@ -45,19 +45,19 @@ msgstr ""
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:100, page-sidebar.php:3
+#: functions.php:107, page-sidebar.php:3
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:102
+#: functions.php:109
 msgid "Add widgets here."
 msgstr ""
 
-#: functions.php:117
+#: functions.php:124
 msgid "Expand submenu"
 msgstr ""
 
-#: functions.php:118
+#: functions.php:125
 msgid "Collapse submenu"
 msgstr ""
 
@@ -65,7 +65,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: page-flexbuilder.php:14
+#: page-flexbuilder.php:3
 msgid "Flexbuilder"
 msgstr ""
 
@@ -78,11 +78,11 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: single.php:23
+#: single.php:24
 msgid "Previous:"
 msgstr ""
 
-#: single.php:24
+#: single.php:25
 msgid "Next:"
 msgstr ""
 
@@ -114,7 +114,7 @@ msgstr ""
 msgid "Read More"
 msgstr ""
 
-#: flexbuilder/posts.php:67
+#: flexbuilder/posts.php:68
 msgid "By"
 msgstr ""
 
@@ -371,10 +371,6 @@ msgstr ""
 
 #: fields/flexbuilder/item_list.php:30, fields/flexbuilder/components/video.php:8
 msgid "Layout"
-msgstr ""
-
-#: fields/flexbuilder/item_list.php:11, fields/flexbuilder/item_list.php:11, fields/flexbuilder/item_list.php:10
-msgid "Intro (optional)"
 msgstr ""
 
 #: fields/flexbuilder/pageheader.php:11

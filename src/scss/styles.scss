@@ -1,14 +1,14 @@
 // Load Bootstrap variables
 @import "base/variables";
 
+// Load Bootstrap
+@import "base/bootstrap";
+
 // Load Hamburger CSS.
 @import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers";
 
 // Load Magnific Popup CSS
 @import "../../node_modules/magnific-popup/src/css/main";
-
-// Load Bootstrap
-@import "base/bootstrap";
 
 // Load styles
 @import "base/_bootstrap-adjustments";
