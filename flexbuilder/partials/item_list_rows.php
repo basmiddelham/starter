@@ -1,6 +1,9 @@
 <?php
-$alternate = (!empty($row['field_flexbuilder_flexbuilder_item_list_options']) && in_array('alternate', $row['field_flexbuilder_flexbuilder_item_list_options'])) ? 'alternate' : '';
-if (!empty($row['options']) && in_array('bg-img', $row['field_flexbuilder_flexbuilder_item_list_options'])) {
+$options = get_sub_field('options');
+
+$alternate = (!empty($options) && in_array('alternate', $options)) ? 'alternate' : '';
+
+if (!empty($options) && in_array('bg-img', $options)) {
 	$img_column     = 'col-md-5';
 	$txt_column     = 'col-md-7';
 	$img_size       = 'one_half' . $img_shape_str;
@@ -9,9 +12,10 @@ if (!empty($row['options']) && in_array('bg-img', $row['field_flexbuilder_flexbu
 	$txt_column     = 'col-md-8';
 	$img_size       = 'one_third' . $img_shape_str;
 }
+print_r($img_column);
 
 echo '<div class="item_list-rows v-center ' . $alternate . '">';
-foreach ($row['field_flexbuilder_flexbuilder_item_list_list'] as $list_item) :
+foreach ($list as $list_item) :
 	echo '<div class="row mb">';
 	$image = ($list_item['field_flexbuilder_flexbuilder_item_list_list_image']) ? wp_get_attachment_image($list_item['field_flexbuilder_flexbuilder_item_list_list_image'], $img_size, '', array('class' => $row['field_flexbuilder_flexbuilder_item_list_image_shape'] . ' mx-auto')) : '';
 	echo '<div class="item_list-image ' . $img_column . '">';

@@ -7,9 +7,9 @@ $item_list
 
     // Itemlist content
     ->addTab('content', ['placement' => 'left'])
-        ->addAccordion('intro', ['label' => __('Intro (optional)', 'strt'), 'wrapper' => ['width' => '100']])
-            ->addWysiwyg('intro', ['label' => __('Intro (optional)', 'strt'), 'placeholder' => __('Intro (optional)', 'strt'), 'wrapper' => ['class' => 'autosize']])
-        ->addAccordion('intro_end', ['endpoint' => 1])
+        // ->addAccordion('intro', ['label' => __('Intro (optional)', 'strt'), 'wrapper' => ['width' => '100']])
+        //     ->addWysiwyg('intro', ['label' => __('Intro (optional)', 'strt'), 'placeholder' => __('Intro (optional)', 'strt'), 'wrapper' => ['class' => 'autosize']])
+        // ->addAccordion('intro_end', ['endpoint' => 1])
         ->addRepeater('list', ['button_label' => 'Add Item', 'layout' => 'block'])
             ->addImage('image', ['return_format' => 'id', 'preview_size' => 'medium', 'wrapper' => ['width' => '40']])
             ->addGroup('content', ['wrapper' => ['width' => '60']])
@@ -19,9 +19,9 @@ $item_list
         ->endRepeater()
 
     // Container Options
-    ->addTab('container_options')
-        ->addFields(get_field_partial('flexbuilder.partials.container_width'))
-        ->addFields(get_field_partial('flexbuilder.partials.section_bg'))
+    // ->addTab('container_options')
+    //     ->addFields(get_field_partial('flexbuilder.partials.container_width'))
+    //     ->addFields(get_field_partial('flexbuilder.partials.section_bg'))
 
     // Itemlist options
     ->addTab('item_list_options')

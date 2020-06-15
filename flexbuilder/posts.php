@@ -54,9 +54,10 @@ while ($query->have_posts()) :
 	$excerpt_crop   = substr($excerpt, 0, strrpos($excerpt, ' ')) . '... <a href="' . $permalink . '">' . __('Read More', 'strt') . '</a>';
 
 	echo '<article '; post_class('post-item ' . $post_columns . ' mb-4'); echo '>';
-	if (get_the_post_thumbnail()) :
-		echo '<header>';
-		echo '<a href="' . $permalink . '">' . get_the_post_thumbnail($post->ID, 'one_' . $thumbsize . '_crop') . '</a>';
+	echo '<header>';
+		if (get_the_post_thumbnail()) :
+			echo '<a href="' . $permalink . '">' . get_the_post_thumbnail($post->ID, 'one_' . $thumbsize . '_crop') . '</a>';
+		endif;
 		echo '<h3><a href="' . $permalink . '">' . get_the_title() . '</a></h3>';
 		if (in_array('show_date', $post_options) || in_array('show_author', $post_options)) :
 			echo '<div class="post-meta">';
@@ -68,8 +69,7 @@ while ($query->have_posts()) :
 			endif;
 			echo '</div>';
 		endif;
-		echo '</header>';
-	endif;
+	echo '</header>';
 	echo '<p>' . $excerpt_crop . '</p>';
 	if (in_array('show_cats', $post_options) && $post_type === 'post') :
 		echo '<div class="categories">' . __('Posted in: ', 'strt') . get_the_category_list(', ') . '.</div>';
