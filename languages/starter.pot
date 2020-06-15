@@ -94,7 +94,7 @@ msgstr ""
 msgid "Posts"
 msgstr ""
 
-#: fields/flexbuilder.php:40, fields/flexbuilder/item_list.php:31, fields/flexbuilder/posts.php:17
+#: fields/flexbuilder.php:40, fields/flexbuilder/item_list.php:23, fields/flexbuilder/posts.php:17
 msgid "Columns"
 msgstr ""
 
@@ -273,11 +273,11 @@ msgstr ""
 msgid "Vertical center"
 msgstr ""
 
-#: fields/flexbuilder/columns.php:102, fields/flexbuilder/item_list.php:51
+#: fields/flexbuilder/columns.php:102, fields/flexbuilder/item_list.php:43
 msgid "Center all text"
 msgstr ""
 
-#: fields/flexbuilder/columns.php:101, fields/flexbuilder/item_list.php:50, fields/flexbuilder/item_list.php:44, fields/flexbuilder/components/video.php:22
+#: fields/flexbuilder/columns.php:101, fields/flexbuilder/item_list.php:42, fields/flexbuilder/item_list.php:36, fields/flexbuilder/components/video.php:22
 msgid "Options"
 msgstr ""
 
@@ -325,51 +325,51 @@ msgstr ""
 msgid "Add row"
 msgstr ""
 
-#: fields/flexbuilder/item_list.php:65
+#: fields/flexbuilder/item_list.php:57
 msgid "Round"
 msgstr ""
 
-#: fields/flexbuilder/item_list.php:64
+#: fields/flexbuilder/item_list.php:56
 msgid "Square"
 msgstr ""
 
-#: fields/flexbuilder/item_list.php:63
-msgid "Crop"
-msgstr ""
-
-#: fields/flexbuilder/item_list.php:62, fields/flexbuilder/partials/container_width.php:9
-msgid "Normal"
-msgstr ""
-
-#: fields/flexbuilder/item_list.php:59
-msgid "Image shape"
+#: fields/flexbuilder/item_list.php:55, fields/flexbuilder/section_options.php:8, fields/flexbuilder/partials/container_width.php:8
+msgid "Wide"
 msgstr ""
 
 #: fields/flexbuilder/item_list.php:54
-msgid "Buttons"
+msgid "Natural"
 msgstr ""
 
-#: fields/flexbuilder/item_list.php:47
-msgid "Large images"
+#: fields/flexbuilder/item_list.php:51
+msgid "Image shape"
 msgstr ""
 
 #: fields/flexbuilder/item_list.php:46
+msgid "Buttons"
+msgstr ""
+
+#: fields/flexbuilder/item_list.php:39
+msgid "Large images"
+msgstr ""
+
+#: fields/flexbuilder/item_list.php:38
 msgid "Alternate rows"
 msgstr ""
 
-#: fields/flexbuilder/item_list.php:36
+#: fields/flexbuilder/item_list.php:28
 msgid "Column amount"
 msgstr ""
 
-#: fields/flexbuilder/item_list.php:33
+#: fields/flexbuilder/item_list.php:25
 msgid "Wide rows"
 msgstr ""
 
-#: fields/flexbuilder/item_list.php:32
+#: fields/flexbuilder/item_list.php:24
 msgid "Rows"
 msgstr ""
 
-#: fields/flexbuilder/item_list.php:30, fields/flexbuilder/components/video.php:8
+#: fields/flexbuilder/item_list.php:22, fields/flexbuilder/components/video.php:8
 msgid "Layout"
 msgstr ""
 
@@ -455,10 +455,6 @@ msgstr ""
 
 #: fields/flexbuilder/section_options.php:10, fields/flexbuilder/partials/container_width.php:10
 msgid "Narrow"
-msgstr ""
-
-#: fields/flexbuilder/section_options.php:8, fields/flexbuilder/partials/container_width.php:8
-msgid "Wide"
 msgstr ""
 
 #: fields/flexbuilder/section_options.php:7
@@ -639,6 +635,10 @@ msgstr ""
 
 #: fields/flexbuilder/partials/column_content.php:8
 msgid "Add content"
+msgstr ""
+
+#: fields/flexbuilder/partials/container_width.php:9
+msgid "Normal"
 msgstr ""
 
 #: fields/flexbuilder/partials/container_width.php:7

@@ -51,25 +51,25 @@ if ( ! function_exists( 'strt_setup' ) ) :
 		);
 
 		// Add Image sizes
-		add_image_size('three', 260, 9999);
+		add_image_size('three_natural', 260, 9999);
 		add_image_size('three_wide', 260, 146.25, true);
 		add_image_size('three_square', 260, 260, true);
 
-		add_image_size('four', 360, 9999);
+		add_image_size('four_natural', 360, 9999);
 		add_image_size('four_wide', 360, 202.5, true);
 		add_image_size('four_square', 360, 360, true);
 
-		add_image_size('six', 560, 9999);
+		add_image_size('six_natural', 560, 9999);
 		add_image_size('six_wide', 560, 315, true);
 		add_image_size('six_square', 560, 560, true);
 
-		add_image_size('eight', 760, 9999);
+		add_image_size('eight_natural', 760, 9999);
 		add_image_size('eight_wide', 760, 427.5, true);
 
-		add_image_size('nine', 860, 9999);
+		add_image_size('nine_natural', 860, 9999);
 		add_image_size('nine_wide', 860, 483.75, true);
 
-		add_image_size('twelve', 1160, 9999);
+		add_image_size('twelve_natural', 1160, 9999);
 	}
 endif;
 add_action( 'after_setup_theme', 'strt_setup' );
@@ -79,16 +79,16 @@ add_action( 'after_setup_theme', 'strt_setup' );
  */
 add_filter('image_size_names_choose', function ($sizes) {
     return array_merge($sizes, array(
-        'three'        => '1/4',
-        'three_wide'   => '1/4 Wide',
-        'three_square' => '1/4 Square',
-        'four'         => '1/3',
-        'four_wide'    => '1/3 Wide',
-        'four_square'  => '1/3 Square',
-        'six'          => '1/2',
-        'six_wide'     => '1/2 Wide',
-        'six_square'   => '1/2 Square',
-        'twelve'       => '1/1',
+        'three_natural'  => '1/4',
+        'three_wide'     => '1/4 Wide',
+        'three_square'   => '1/4 Square',
+        'four_natural'   => '1/3',
+        'four_wide'      => '1/3 Wide',
+        'four_square'    => '1/3 Square',
+        'six_natural'    => '1/2',
+        'six_wide'       => '1/2 Wide',
+        'six_square'     => '1/2 Square',
+        'twelve_natural' => '1/1',
     ));
 });
 

@@ -1,7 +1,6 @@
 <?php
 $column_amount = get_sub_field('column_amount');
-// $list = get_sub_field('list');
-// var_dump($list);
+
 switch($column_amount) :
 case '2':
 	$column_classes = 'col-sm-6';

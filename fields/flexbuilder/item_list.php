@@ -10,7 +10,7 @@ $item_list
         ->addRepeater('list', ['button_label' => 'Add Item', 'layout' => 'block'])
             ->addImage('image', ['return_format' => 'id', 'preview_size' => 'medium', 'wrapper' => ['width' => '40']])
             ->addGroup('content', ['wrapper' => ['width' => '60']])
-                ->addWysiwyg('editor', ['wrapper' => ['class' => 'autosize']])
+                ->addWysiwyg('editor')
                 ->addFields(get_field_partial('flexbuilder.components.button_content'))
             ->endGroup()
         ->endRepeater()
@@ -19,7 +19,7 @@ $item_list
     ->addTab('item_list_options')
 
         // Layout
-        ->addRadio('layout', ['label' =>  __('Layout', 'strt')])
+        ->addRadio('layout', ['label' => __('Layout', 'strt')])
             ->addChoice('columns', __('Columns', 'strt'))
             ->addChoice('rows', __('Rows', 'strt'))
             ->addChoice('wide_rows', __('Wide rows', 'strt'))
@@ -55,6 +55,6 @@ $item_list
             ->addChoice('wide', __('Wide', 'strt'))
             ->addChoice('square', __('Square', 'strt'))
             ->addChoice('round', __('Round', 'strt'))
-            ->setDefaultValue('crop');
+            ->setDefaultValue('wide');
 
 return $item_list;
