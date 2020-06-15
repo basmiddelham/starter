@@ -3,8 +3,6 @@
   .item_list-image {
     img {
       @extend .shadow-sm;
-
-      border-radius: $border-radius;
     }
   }
 

@@ -5,15 +5,15 @@ $column_amount = get_sub_field('column_amount');
 switch($column_amount) :
 case '2':
 	$column_classes = 'col-sm-6';
-	$img_size       = 'one_half' . $img_shape_str;
+	$img_size       = 'six' . $img_shape_str;
 	break;
 case '3':
 	$column_classes = 'col-sm-6 col-lg-4';
-	$img_size       = 'one_third' . $img_shape_str;
+	$img_size       = 'four' . $img_shape_str;
 	break;
 case '4':
 	$column_classes = 'col-sm-6 col-lg-3';
-	$img_size       = 'one_fourth' . $img_shape_str;
+	$img_size       = 'three' . $img_shape_str;
 	break;
 endswitch;
 echo '<div class="row item_list-columns justify-content-center">';
