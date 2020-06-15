@@ -11,11 +11,11 @@ $post_tax = get_sub_field('post_tax');
 
 // Columns size
 if ($post_columns === 'col-md-6') {
-	$thumbsize = 'half';
+	$thumbsize = 'six';
 } elseif ($post_columns === 'col-md-4') {
-	$thumbsize = 'third';
+	$thumbsize = 'four';
 } else {
-	$thumbsize = 'fourth';
+	$thumbsize = 'three';
 }
 
 // Category
@@ -56,7 +56,7 @@ while ($query->have_posts()) :
 	echo '<article '; post_class('post-item ' . $post_columns . ' mb-4'); echo '>';
 	echo '<header>';
 		if (get_the_post_thumbnail()) :
-			echo '<a href="' . $permalink . '">' . get_the_post_thumbnail($post->ID, 'one_' . $thumbsize . '_crop') . '</a>';
+			echo '<a href="' . $permalink . '">' . get_the_post_thumbnail($post->ID, $thumbsize . '_wide') . '</a>';
 		endif;
 		echo '<h3><a href="' . $permalink . '">' . get_the_title() . '</a></h3>';
 		if (in_array('show_date', $post_options) || in_array('show_author', $post_options)) :
@@ -80,7 +80,7 @@ wp_reset_postdata();
 
 if (in_array('show_more', $post_options)) :
 	$button = get_sub_field('button');
-	echo '<div class="col-12">';
+	echo '<div class="col-12 mb-2">';
 	if ( have_rows('button' ) ):
 		while ( have_rows( 'button' ) ): the_row();
 			include(get_template_directory() . '/flexbuilder/components/button.php');

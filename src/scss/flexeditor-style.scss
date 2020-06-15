@@ -191,22 +191,32 @@
 .acfe-flexible-opened-actions {
     position: absolute;
     padding: 0 !important;
-    top: -5px;
-    right: -10px;
-    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+    top: -21px;
+    right: 2px;
     border-color: transparent !important;
     background-color: transparent !important;
     z-index: 3;
 
-    a {
-        color: $white !important;
-        border-color: $primary !important;
+    a.button {
+        border-color: transparent !important;
         background: $primary !important;
-        padding: 0 4px !important;
-        line-height: 16px !important;
+        padding: 0 !important;
+        line-height: 14px !important;
         min-height: auto !important;
-        font-size: 9px !important;
-        text-transform: uppercase;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 16px;
+        border-radius: 20px;
+    }
+
+    &::after {
+        color: $white !important;
+        content: 'x';
+        position: absolute;
+        left: 5px;
+        top: -2px;
+        font-family: arial;
     }
 }
 
@@ -321,6 +331,10 @@ a.acf-icon.light.dashicons-admin-generic {
         .acf-fc-layout-controls {
             top: 4px !important;
             right: 4px !important;
+        }
+
+        &:not(.-collapsed) .acf-fc-layout-controls {
+            padding-right: 20px;
         }
     }
 

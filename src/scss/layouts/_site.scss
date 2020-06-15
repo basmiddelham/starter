@@ -34,7 +34,8 @@ body {
 
     // Sidebar layout
     &.single,
-    &.page-template-page-sidebar {
+    &.page-template-page-sidebar,
+    &.woocommerce {
 
         > .site {
             @include make-container();

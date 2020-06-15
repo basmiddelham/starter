@@ -132,7 +132,7 @@ if ( ! function_exists( 'strt_woocommerce_wrapper_before' ) ) {
 	 * @return void
 	 */
 	function strt_woocommerce_wrapper_before() {
-		echo '<div class="container sb">';
+		echo '<div class="wrap">';
 		echo '<main class="site-main" id="content">';
 	}
 }
@@ -149,7 +149,7 @@ if ( ! function_exists( 'strt_woocommerce_wrapper_after' ) ) {
 	function strt_woocommerce_wrapper_after() {
 		echo '</main><!-- #content -->';
 		do_action( 'woocommerce_sidebar' );
-		echo '</div><!-- #container sb -->';
+		echo '</div><!-- .wrap -->';
 	}
 }
 add_action( 'woocommerce_after_main_content', 'strt_woocommerce_wrapper_after' );

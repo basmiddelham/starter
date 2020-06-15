@@ -45,19 +45,19 @@ msgstr ""
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:107, page-sidebar.php:3
+#: functions.php:109, page-sidebar.php:3
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:109
+#: functions.php:111
 msgid "Add widgets here."
 msgstr ""
 
-#: functions.php:124
+#: functions.php:126
 msgid "Expand submenu"
 msgstr ""
 
-#: functions.php:125
+#: functions.php:127
 msgid "Collapse submenu"
 msgstr ""
 
