@@ -51,19 +51,25 @@ if ( ! function_exists( 'strt_setup' ) ) :
 		);
 
 		// Add Image sizes
-		add_image_size('one', 956, 9999);
-		add_image_size('one_half', 556, 9999);
-		add_image_size('one_half_crop', 556, 371, true);
-		add_image_size('one_half_square', 556, 556, true);
-		add_image_size('one_half_wide', 720, 400, true);
-		add_image_size('one_third', 356, 9999);
-		add_image_size('one_third_crop', 356, 237, true);
-		add_image_size('one_third_square', 356, 356, true);
-		add_image_size('two_third', 712, 9999);
-		add_image_size('two_third_wide', 960, 480, true);
-		add_image_size('one_fourth', 256, 9999);
-		add_image_size('one_fourth_crop', 256, 171, true);
-		add_image_size('one_fourth_square', 256, 256, true);
+		add_image_size('three', 260, 9999);
+		add_image_size('three_wide', 260, 146.25, true);
+		add_image_size('three_square', 260, 260, true);
+
+		add_image_size('four', 360, 9999);
+		add_image_size('four_wide', 360, 202.5, true);
+		add_image_size('four_square', 360, 360, true);
+
+		add_image_size('six', 560, 9999);
+		add_image_size('six_wide', 560, 315, true);
+		add_image_size('six_square', 560, 560, true);
+
+		add_image_size('eight', 760, 9999);
+		add_image_size('eight_wide', 760, 427.5, true);
+
+		add_image_size('nine', 860, 9999);
+		add_image_size('nine_wide', 860, 483.75, true);
+
+		add_image_size('twelve', 1160, 9999);
 	}
 endif;
 add_action( 'after_setup_theme', 'strt_setup' );
@@ -73,23 +79,26 @@ add_action( 'after_setup_theme', 'strt_setup' );
  */
 add_filter('image_size_names_choose', function ($sizes) {
     return array_merge($sizes, array(
-        'one_fourth'        => '1/4',
-        'one_fourth_square' => '1/4 Square',
-        'one_third'         => '1/3',
-        'one_third_square'  => '1/3 Square',
-        'one_half'          => '1/2',
-        'one_half_square'   => '1/2 Square',
-        'one'               => '1/1',
+        'three'        => '1/4',
+        'three_wide'   => '1/4 Wide',
+        'three_square' => '1/4 Square',
+        'four'         => '1/3',
+        'four_wide'    => '1/3 Wide',
+        'four_square'  => '1/3 Square',
+        'six'          => '1/2',
+        'six_wide'     => '1/2 Wide',
+        'six_square'   => '1/2 Square',
+        'twelve'       => '1/1',
     ));
 });
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  */
-// function strt_content_width() {
-// 	$GLOBALS['content_width'] = apply_filters( 'strt_content_width', 870 );
-// }
-// add_action( 'after_setup_theme', 'strt_content_width', 0 );
+function strt_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'strt_content_width', 1160 );
+}
+add_action( 'after_setup_theme', 'strt_content_width', 0 );
 
 /**
  * Register widget area.

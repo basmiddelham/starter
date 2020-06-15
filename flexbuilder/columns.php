@@ -23,7 +23,7 @@ if (have_rows('columns')):
 
         // Divider
         case ('divider'):
-            $divider = ($column['field_fb_section_cols_columns_divider_display_line']) ? '<hr>' : '<div class="w-100 py-4"></div>';
+            $divider = ($column['field_fb_section_cols_columns_divider_display_line']) ? '<hr>' : '<div class="w-100 py-3"></div>';
             echo $divider;
             break;
 

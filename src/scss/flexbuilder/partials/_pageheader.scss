@@ -1,14 +1,11 @@
 .pageheader {
   h1.pageheader-title {
-    font-size: 0.8125rem;
+    font-size: 0.9375rem;
     text-transform: uppercase;
-    font-weight: 600;
-    margin-top: 0;
-    padding-bottom: 0.25rem;
-    border-bottom: 1px solid $primary;
+    margin: 0;
   }
 
-  h2.pageheader-heading {
+  .pageheader-heading {
     @extend .display-3;
   }
 

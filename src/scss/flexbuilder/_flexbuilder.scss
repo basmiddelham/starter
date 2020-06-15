@@ -45,8 +45,8 @@ main.flex-content>section {
 
     // Add margin-top to sections with background following a section without background.
     + [class*="bg-"] {
-      @extend .mt-3;
-      @extend .mt-xl-5;
+      @extend .mt-2;
+      @extend .mt-xl-4;
     }
   }
 
@@ -54,8 +54,8 @@ main.flex-content>section {
   -------------------------------------------------------------------*/
   // Add extra large padding to sections with a background image.
   &.bg-img {
-    padding-top: 8rem !important;
-    padding-bottom: 8rem !important;
+    padding-top: 7rem !important;
+    padding-bottom: 7rem !important;
   }
 }
 

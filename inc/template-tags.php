@@ -128,7 +128,7 @@ if ( ! function_exists( 'strt_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-thumbnail">
-				<?php the_post_thumbnail('large'); ?>
+				<?php the_post_thumbnail('nine_wide'); ?>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>

@@ -3,14 +3,14 @@
 @import "../../node_modules/bootstrap/scss/variables";
 
 // Reset ACF admin styles
-ul {
-    list-style: disc;
-    padding: 0 0 0 40px;
+// ul {
+//     list-style: disc;
+//     padding: 0 0 0 40px;
 
-    li {
-        margin-bottom: 0;
-    }
-}
+//     li {
+//         margin-bottom: 0;
+//     }
+// }
 
 .acfe-flexible-placeholder.-preview {
     font-family: $font-family-base;
@@ -126,8 +126,14 @@ ul {
         }
 
         // Add padding to top column-previews (without a background)
-        > section:not([class*='bg-']) {
+        > section {
             padding-top: 1.5rem;
+        }
+
+        // Add padding to top column-previews (without a background)
+        > section[class*="bg-"] {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
         }
     }
 }
@@ -171,6 +177,7 @@ ul {
 #acf-group_fb {
     @import "base/bootstrap-adjustments";
     @import "base/typography";
+    @import "base/global";
     @import "base/elements";
     @import "base/forms";
     @import "flexbuilder/flexbuilder";
