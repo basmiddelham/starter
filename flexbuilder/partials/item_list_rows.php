@@ -1,44 +1,43 @@
 <?php
 $options = get_sub_field('options');
-
 $alternate = (!empty($options) && in_array('alternate', $options)) ? 'alternate' : '';
 
-if (!empty($options) && in_array('bg-img', $options)) {
-	$img_column     = 'col-md-5';
-	$txt_column     = 'col-md-7';
-	$img_size       = 'one_half' . $img_shape_str;
+if (!empty($options) && in_array('lg-img', $options)) {
+    $img_column = 'col-md-5';
+    $txt_column = 'col-md-7';
+    $img_size = 'six' . $img_shape_str;
 } else {
-	$img_column     = 'col-md-4';
-	$txt_column     = 'col-md-8';
-	$img_size       = 'one_third' . $img_shape_str;
+    $img_column = 'col-md-4';
+    $txt_column = 'col-md-8';
+    $img_size = 'four' . $img_shape_str;
 }
-print_r($img_column);
 
 echo '<div class="item_list-rows v-center ' . $alternate . '">';
-foreach ($list as $list_item) :
-	echo '<div class="row mb">';
-	$image = ($list_item['field_flexbuilder_flexbuilder_item_list_list_image']) ? wp_get_attachment_image($list_item['field_flexbuilder_flexbuilder_item_list_list_image'], $img_size, '', array('class' => $row['field_flexbuilder_flexbuilder_item_list_image_shape'] . ' mx-auto')) : '';
-	echo '<div class="item_list-image ' . $img_column . '">';
-	if ($list_item['field_flexbuilder_flexbuilder_item_list_list_content']['button_link']) :
-		echo '<a href="' . $list_item['field_flexbuilder_flexbuilder_item_list_list_content']['button_link']['url'] . '" target="' . ($list_item['content']['button_link']['target'] ? $list_item['field_flexbuilder_flexbuilder_item_list_list_content']['button_link']['target'] : '_self') . '">';
-	endif;
-	echo $image;
-	if ($list_item['field_flexbuilder_flexbuilder_item_list_list_content']['button_link']) : 
-		echo '</a>';
-	endif;
-	echo '</div>';
-	echo '<div class="item_list-body ' . $txt_column . '">';
-	echo '<div class="inner">';
-	echo $list_item['field_flexbuilder_flexbuilder_item_list_list_content']['field_flexbuilder_flexbuilder_item_list_list_content_editor'];
-	include(get_template_directory() . '/flexbuilder/components/button.php');
-
-	// include('flexbuilder.components.button';
-			// $data = $list_item['content'],
-			// $data['button_color'] = $row['buttons']['button_color'],
-			// $data['button_size'] = $row['buttons']['button_size'],
-			// $data['button_align'] = $row['buttons']['button_align']
-	echo '</div>';
-	echo '</div>';
-	echo '</div>';
+foreach ($list as $list_item):
+    // print_r($list_item);
+    echo '<div class="row mb-4">';
+    $image = ($list_item['image']) ? wp_get_attachment_image($list_item['image'], $img_size, '', array('class' => $img_shape_class . ' mx-auto')) : '';
+    echo '<div class="item_list-image ' . $img_column . '">';
+    if ($list_item['content']['button_link']):
+        echo '<a href="' . $list_item['content']['button_link']['url'] . '" target="' . ($list_item['content']['button_link']['target'] ? $list_item['content']['button_link']['target'] : '_self') . '">';
+    endif;
+    echo $image;
+    if ($list_item['content']['button_link']):
+        echo '</a>';
+    endif;
+    echo '</div>';
+    echo '<div class="item_list-body ' . $txt_column . '">';
+    echo '<div class="inner">';
+    echo $list_item['content']['editor'];
+    $button_link = $list_item['content']['button_link'];
+    if ($button_link):
+        $button_text = $button_link['title'];
+        $button_url = $button_link['url'];
+        $button_target = ($button_link['target'] ? $button_link['target'] : '_self');
+        echo '<a href="' . $button_url . '" target="' . $button_target . '" class="btn ' . $button_color . ' ' . $button_size . ' ' . $button_align . '" role="button">' . $button_text . '</a>';
+    endif;
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
 endforeach;
 echo '</div>';

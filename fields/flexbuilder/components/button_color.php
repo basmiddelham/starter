@@ -13,6 +13,7 @@ $button_color
         ->addChoice('btn-outline-light', __('Light outline', 'strt'))
         ->addChoice('btn-dark', __('Dark', 'strt'))
         ->addChoice('btn-outline-dark', __('Dark outline', 'strt'))
+        ->addChoice('btn-link', __('Link', 'strt'))
         ->setDefaultValue('btn-primary');
 
 return $button_color;

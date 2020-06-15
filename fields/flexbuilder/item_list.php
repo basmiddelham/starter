@@ -32,15 +32,11 @@ $item_list
             ->addChoice('4')
             ->setDefaultValue('4')
 
-        // Row layout
-        ->addCheckbox('options', ['label' => __('Options', 'strt'), 'default_value' => [0 => 'alternate', 1 => 'lg-img']])
+        // Options
+        ->addCheckbox('options', ['label' => __('Options', 'strt'), 'allow_custom' => 1, 'default_value' => [0 => 'alternate', 1 => 'lg-img']])
             ->conditional('layout', '==', 'rows')
             ->addChoice('alternate', __('Alternate rows', 'strt'))
             ->addChoice('lg-img', __('Large images', 'strt'))
-
-        // Options
-        ->addCheckbox('row_options', ['label' => __('Options', 'strt'), 'allow_custom' => 1])
-            ->addChoice('text-center', __('Center all text', 'strt'))
 
         // Buttons
         ->addGroup('buttons', ['label' => __('Buttons', 'strt')])

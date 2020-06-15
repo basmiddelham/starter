@@ -273,11 +273,11 @@ msgstr ""
 msgid "Vertical center"
 msgstr ""
 
-#: fields/flexbuilder/columns.php:102, fields/flexbuilder/item_list.php:43
+#: fields/flexbuilder/columns.php:102
 msgid "Center all text"
 msgstr ""
 
-#: fields/flexbuilder/columns.php:101, fields/flexbuilder/item_list.php:42, fields/flexbuilder/item_list.php:36, fields/flexbuilder/components/video.php:22
+#: fields/flexbuilder/columns.php:101, fields/flexbuilder/item_list.php:36, fields/flexbuilder/components/video.php:22
 msgid "Options"
 msgstr ""
 
@@ -325,27 +325,27 @@ msgstr ""
 msgid "Add row"
 msgstr ""
 
-#: fields/flexbuilder/item_list.php:57
+#: fields/flexbuilder/item_list.php:53
 msgid "Round"
 msgstr ""
 
-#: fields/flexbuilder/item_list.php:56
+#: fields/flexbuilder/item_list.php:52
 msgid "Square"
 msgstr ""
 
-#: fields/flexbuilder/item_list.php:55, fields/flexbuilder/section_options.php:8, fields/flexbuilder/partials/container_width.php:8
+#: fields/flexbuilder/item_list.php:51, fields/flexbuilder/section_options.php:8, fields/flexbuilder/partials/container_width.php:8
 msgid "Wide"
 msgstr ""
 
-#: fields/flexbuilder/item_list.php:54
+#: fields/flexbuilder/item_list.php:50
 msgid "Natural"
 msgstr ""
 
-#: fields/flexbuilder/item_list.php:51
+#: fields/flexbuilder/item_list.php:47
 msgid "Image shape"
 msgstr ""
 
-#: fields/flexbuilder/item_list.php:46
+#: fields/flexbuilder/item_list.php:42
 msgid "Buttons"
 msgstr ""
 
@@ -491,6 +491,10 @@ msgstr ""
 
 #: fields/flexbuilder/components/button_align.php:7, fields/flexbuilder/components/button_group.php:7
 msgid "Alignment"
+msgstr ""
+
+#: fields/flexbuilder/components/button_color.php:16
+msgid "Link"
 msgstr ""
 
 #: fields/flexbuilder/components/button_color.php:15

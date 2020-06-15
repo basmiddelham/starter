@@ -18,7 +18,7 @@ endswitch;
 echo '<div class="row item_list-columns justify-content-center">';
 foreach ($list as $list_item) :
 	$image = ($list_item['image']) ? wp_get_attachment_image($list_item['image'], $img_size, '', array('class' => $img_shape_class . ' mx-auto d-table mb-3')) : '';
-	echo '<div class="' . $column_classes . ' mb">';
+	echo '<div class="' . $column_classes . ' mb-4">';
 	echo '<div class="item_list-item">';
 	if ($image) :
 		echo '<div class="item_list-image">';
@@ -34,17 +34,16 @@ foreach ($list as $list_item) :
 	if ($list_item) :
 		echo '<div class="item_list-body">' . $list_item['content']['editor'] . '</div>';
 	endif;
-	if ($list_item['content']['button_link']) :
-		echo '<div class="item_list-footer">';
-		include(get_template_directory() . '/flexbuilder/components/button.php');
 
-			//   $data = $list_item['content'],
-			//   $data['button_color'] = $row['buttons']['button_color'],
-			//   $data['button_size'] = $row['buttons']['button_size'],
-			//   $data['button_align'] = $row['buttons']['button_align']
-			// ]);
-		echo '</div>';
+	$button_link = $list_item['content']['button_link'];
+	if ($button_link) :
+	  $button_text   = $button_link['title'];
+	  $button_url    = $button_link['url'];
+	  $button_target = ($button_link['target'] ? $button_link['target'] : '_self');
+	
+	  echo '<a href="' . $button_url . '" target="' . $button_target . '" class="btn ' . $button_color . ' ' . $button_size . ' ' . $button_align . '" role="button">' . $button_text . '</a>';
 	endif;
+
 	echo '</div>';
 	echo '</div>';
 endforeach;

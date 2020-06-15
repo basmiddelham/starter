@@ -3,6 +3,11 @@ $list = get_sub_field('list');
 $image_shape = get_sub_field('image_shape');
 $layout = get_sub_field('layout');
 
+$buttons      = get_sub_field('buttons');
+$button_size  = $buttons['button_size'];
+$button_color = $buttons['button_color'];
+$button_align = $buttons['button_align'];
+
 if ($list) :
 	$img_shape_str   = ('round' === $image_shape) ? '_square' : '_' . $image_shape;
 	$img_shape_class = ('round' === $image_shape || 'square' === $image_shape) ? $image_shape : '';
