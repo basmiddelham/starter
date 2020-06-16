@@ -1,0 +1,137 @@
+/* Layout
+-------------------------------------------------------------- */
+body.woocommerce-cart {
+  .woocommerce-cart-form {
+    margin-bottom: 1rem;
+
+    @extend .table-responsive;
+  }
+
+  @include media-breakpoint-up(md) {
+    .cart-collaterals {
+      @include make-row();
+    }
+
+    .cross-sells {
+      @include make-col-ready();
+      @include make-col(8);
+    }
+
+    .cart_totals {
+      @include make-col-ready();
+      @include make-col(4);
+
+      margin-left: auto;
+    }
+  }
+}
+
+/* Cart Table
+-------------------------------------------------------------- */
+.shop_table.cart {
+  @extend .table-sm;
+
+  td {
+    vertical-align: middle;
+
+    &.product-name {
+      min-width: 140px;
+    }
+  }
+
+  // Thumbnail
+  .product-thumbnail {
+    img {
+      width: 48px;
+      height: auto;
+      max-width: initial;
+    }
+  }
+
+  // Actions
+  .actions {
+    padding: 0.75rem 0;
+
+    .coupon {
+      float: left;
+
+      > label {
+        @extend .sr-only;
+      }
+
+      input.input-text {
+        @extend .form-control-sm;
+
+        width: auto;
+        float: left;
+      }
+    }
+
+    .button {
+      margin-left: 5px;
+      float: right;
+    }
+  }
+}
+
+/* Cart Totals
+-------------------------------------------------------------- */
+.cart_totals {
+  h2 {
+    font-size: 1.125rem;
+  }
+
+  .shop_table {
+    @extend .table-borderless;
+    @extend .table-sm;
+
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
+  }
+
+  .button.checkout-button {
+    @extend .btn-lg;
+    @extend .btn-block;
+  }
+}
+
+/* Shipping Calculator
+-------------------------------------------------------------- */
+.woocommerce-shipping-calculator {
+  .shipping-calculator-button {
+    position: relative;
+    margin-bottom: 1rem;
+
+    // Icon
+    &::after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      padding-left: 0.5em;
+      font-family: WooCommerce, sans-serif;
+      content: "\E019";
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  }
+
+  .shipping-calculator-form {
+    margin-top: 1rem;
+  }
+
+  // Reset .form-row
+  .form-row {
+    display: block;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .select2-selection--single {
+    margin: 0;
+  }
+
+  select,
+  input[type="text"] {
+    @extend .form-control-sm;
+  }
+}

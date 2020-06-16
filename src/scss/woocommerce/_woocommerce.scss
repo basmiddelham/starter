@@ -1,0 +1,33 @@
+/**
+ * Woocommerce Bootstrap CSS
+ */
+@import "components/fonts";
+@import "components/global";
+@import "components/forms";
+@import "components/notices";
+@import "components/widgets";
+@import "components/product-grid";
+@import "components/star-ratings";
+@import "components/header-cart";
+@import "templates/archive-product";
+@import "templates/single-product";
+@import "templates/single-product-gallery";
+@import "templates/single-product-tabs";
+@import "templates/single-product-reviews";
+@import "templates/cart";
+@import "templates/checkout";
+@import "templates/account";
+
+// .woocommerce-product-search {
+//     @extend .form-group;
+
+//     .search-field {
+//         @extend .form-control;
+//     }
+
+//     button {
+//         @extend .btn;
+//         @extend .btn-primary;
+//         @extend .input-group-append;
+//     }
+// }
