@@ -34,6 +34,8 @@ body {
     }
 
     // Sidebar layout
+    &.search,
+    &.archive,
     &.single,
     &.page-template-page-sidebar,
     &.woocommerce {

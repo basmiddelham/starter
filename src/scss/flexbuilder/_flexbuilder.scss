@@ -9,14 +9,14 @@ main.flex-content>section {
   // Add padding to all sections with a background.
   &[class*="bg-"]:not(.bg-img) {
     @extend .pt-3;
-    @extend .pt-xl-5;
+    @extend .pt-xl-4;
     @extend .pb-3;
-    @extend .pb-xl-5;
+    @extend .pb-xl-4;
 
     // Add top padding to sections without background following a section with background.
     + :not([class*="bg-"]) {
       @extend .pt-3;
-      @extend .pt-xl-5;
+      @extend .pt-xl-4;
     }
 
     // remove margin-bottom from last element

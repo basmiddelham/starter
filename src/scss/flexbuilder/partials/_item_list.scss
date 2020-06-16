@@ -9,13 +9,16 @@
   // Alternate
   @include media-breakpoint-up(md) {
     // Alternate image and text
-    .alternate .row:nth-child(even) {
-      .item_list-image {
-        order: 1;
-      }
+    .alternate {
+      background-color: transparent !important;
+      .row:nth-child(even) {
+        .item_list-image {
+          order: 1;
+        }
 
-      .inner {
-        margin-left: auto;
+        .inner {
+          margin-left: auto;
+        }
       }
     }
 
@@ -52,13 +55,6 @@
       .inner {
         max-width: 720px;
       }
-    }
-  }
-
-  &[class*="bg-"] {
-    .item_list-wide_rows {
-      // @include nmt();
-      // @include nmb();
     }
   }
 }

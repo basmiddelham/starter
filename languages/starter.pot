@@ -114,11 +114,7 @@ msgstr ""
 msgid "Read More"
 msgstr ""
 
-#: flexbuilder/posts.php:68
-msgid "By"
-msgstr ""
-
-#: flexbuilder/posts.php:75
+#: flexbuilder/posts.php:74
 msgid "Posted in: "
 msgstr ""
 

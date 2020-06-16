@@ -41,7 +41,7 @@ $args = array(
 $query = new WP_Query( $args );
 
 if ($intro) :
-	echo '<div class="row"><div class="col-9 mx-auto">' . $intro . '</div></div>';
+	echo '<div class="row"><div class="col-9 mx-auto mb-2">' . $intro . '</div></div>';
 endif;
 
 echo '<div class="row">';
@@ -52,7 +52,6 @@ while ($query->have_posts()) :
 	$excerpt_length = ($post_excerpt_length) ? (int) $post_excerpt_length : 280;
 	$excerpt        = substr($excerpt, 0, $excerpt_length);
 	$excerpt_crop   = substr($excerpt, 0, strrpos($excerpt, ' ')) . '... <a href="' . $permalink . '">' . __('Read More', 'strt') . '</a>';
-
 	echo '<article '; post_class('post-item ' . $post_columns . ' mb-4'); echo '>';
 	echo '<header>';
 		if (get_the_post_thumbnail()) :
@@ -60,19 +59,19 @@ while ($query->have_posts()) :
 		endif;
 		echo '<h3><a href="' . $permalink . '">' . get_the_title() . '</a></h3>';
 		if (in_array('show_date', $post_options) || in_array('show_author', $post_options)) :
-			echo '<div class="post-meta">';
+			echo '<div class="post-meta small">';
 			if (in_array('show_date', $post_options)) :
-				echo '<time class="updated" datetime="' . get_post_time('c', true) . '">' . get_the_date() . '</time>';
+				strt_posted_on();
 			endif;
 			if (in_array('show_author', $post_options)) :
-				echo '<span class="byline author vcard">' . __('By', 'strt') . ' <a href="' . get_author_posts_url(get_the_author_meta('ID')) . '" rel="author" class="fn">' . get_the_author() . '</a></span>';
+				strt_posted_by();
 			endif;
 			echo '</div>';
 		endif;
 	echo '</header>';
 	echo '<p>' . $excerpt_crop . '</p>';
 	if (in_array('show_cats', $post_options) && $post_type === 'post') :
-		echo '<div class="categories">' . __('Posted in: ', 'strt') . get_the_category_list(', ') . '.</div>';
+		echo '<div class="categories small">' . __('Posted in: ', 'strt') . get_the_category_list(', ') . '.</div>';
 	endif;
 	echo '</article>';
 endwhile;

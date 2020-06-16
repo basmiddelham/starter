@@ -40,8 +40,9 @@ foreach ($list as $list_item) :
 	  $button_text   = $button_link['title'];
 	  $button_url    = $button_link['url'];
 	  $button_target = ($button_link['target'] ? $button_link['target'] : '_self');
-	
+	  echo '<div>';
 	  echo '<a href="' . $button_url . '" target="' . $button_target . '" class="btn ' . $button_color . ' ' . $button_size . ' ' . $button_align . '" role="button">' . $button_text . '</a>';
+	  echo '</div>';
 	endif;
 
 	echo '</div>';
