@@ -40,49 +40,6 @@
     }
 }
 
-// Alerts
-.alert {
-
-  // Remove margin-top from first element
-  >*:first-child {
-    margin-top: 0;
-  }
-
-  // Remove margin-bottom from last element
-  >*:last-child {
-    margin-bottom: 0;
-  }
-
-  // Make .alert-link color work automaticly
-  a:not(.btn) {
-    @extend .alert-link;
-  }
-
-  &.alert-primary {
-    @extend .alert-primary;
-  }
-
-  &.alert-secondary {
-    @extend .alert-secondary;
-  }
-
-  &.alert-info {
-    @extend .alert-info;
-  }
-
-  &.alert-success {
-    @extend .alert-success;
-  }
-
-  &.alert-warning {
-    @extend .alert-warning;
-  }
-
-  &.alert-danger {
-    @extend .alert-danger;
-  }
-}
-
 // Accordion
 .accordion {
   a.card-header {
