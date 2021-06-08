@@ -14,7 +14,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 
 <aside class="widget-area">
 	<?php
-	if (is_woocommerce() || is_cart()) {
+	if ( class_exists( 'WooCommerce' ) && is_cart() ) {
 		dynamic_sidebar( 'sidebar-woocommerce' );
 	} else {
 		dynamic_sidebar( 'sidebar-1' );

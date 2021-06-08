@@ -1,4 +1,4 @@
-# Copyright (C) 2020 starter
+# Copyright (C) 2021 starter
 # This file is distributed under the same license as the starter package.
 msgid ""
 msgstr ""
